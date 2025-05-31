@@ -33,3 +33,6 @@ pandas
 mimetypes-magic
 tqdm
 ipykernel
+
+# UI - chainlit
+chainlit
