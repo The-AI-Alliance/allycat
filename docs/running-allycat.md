@@ -143,12 +143,28 @@ Query documents using LLM
 python  4_query.py
 ```
 
-## Step-5: Flask UI
+## Step-5: Web UI
+
+For this step, we need to run a web interface to interact with our RAG system.
+
+We have two options for the web UI:
+
+1. Flask UI - A simple, lightweight web interface (default option)
+2. Chainlit UI - A more feature-rich chat interface with advanced capabilities
+
+### 5.1 - Option 1: Flask UI
 
 ```bash
 python app.py
 ```
 Go to url : http://localhost:8080  and start chatting!
+
+### 5.2 - Option 2: Chainlit UI
+
+```bash
+chainlit run chainlit_app.py --port 8090
+```
+Go to url : http://localhost:8090  and start chatting!
 
 ## Step-6: (Optional) Customizing AllyCat
 
