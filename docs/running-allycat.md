@@ -12,6 +12,13 @@ Make sure you have completed either
 - [native python env setup](running-natively.md)
 - or [docker env setup](running-in-docker.md)
 
+## If using notebooks to run, then launch Jupyter Lab
+```
+cd allycat
+source venv/bin/activate
+pip install jupyterlab
+venv/bin/jupyter lab
+``` 
 
 ## Step-0: Check Configuration
 
