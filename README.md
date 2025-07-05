@@ -6,7 +6,7 @@
 
 # AllyCat
 
-**AllyCat** is full stack, open source chatbot that uses GenAI LLMs to answer questions about your website. It is simple by design and will run on your laptop or server. 
+**AllyCat** is a full-stack, open source chatbot with **pluggable LLM providers** that uses GenAI to answer questions about your website. It is simple by design and scales from laptop to production server. 
 
 ## Why?
 
@@ -28,7 +28,36 @@ AllyCat also includes web scraping tools that extract data from your website (or
 5. Supports multiple vector databases.
    - **Currently:** [Milvus](https://milvus.io/) or [Weaviate](https://weaviate.io)
 6. End User and New Contributor Friendly.
-   - **Currently:** Run locally with [Ollama](https://ollama.com/), or as-a-service on [Replicate](https://replicate.com)
+   - **Currently:** Run locally with [Ollama](https://ollama.com/) or [vLLM](https://docs.vllm.ai/en/latest/index.html), or as-a-service on [Replicate](https://replicate.com)
+7. Easily switch between inference providers - **Pluggable LLM Provider Architecture** - 
+   - **Local:** [Ollama](https://ollama.com/) (lightweight, CPU/GPU)
+   - **High-Performance:** [vLLM](https://docs.vllm.ai/) (optimized GPU inference)  
+   - **Cloud:** [Replicate](https://replicate.com) (managed service)
+   - **Extensible:** Add any LLM provider with a [LlamaIndex implementation](https://docs.llamaindex.ai/en/stable/module_guides/models/llms/)
+8. Supports multiple vector databases
+   - **Currently:** [Milvus](https://milvus.io/) or [Weaviate](https://weaviate.io)
+9. Simple Configuration-Driven Setup
+   - **One-line provider switching:** Change `ACTIVE_PROVIDER` in config file
+   - **No code changes required:** All provider settings centralized in `my_config.py`
+   - **Beginner-friendly:** Works with local Ollama or cloud services
+
+## 🔌 Pluggable Architecture
+
+AllyCat uses a **pluggable provider system** that makes it easy to:
+
+- **Switch LLM providers** by changing one config setting
+- **Add new providers** that have LlamaIndex implementations  
+- **Configure per-provider settings** without touching code
+- **Scale from laptop to production** using the same codebase
+
+**Supported Providers:**
+| Provider | Best For | Setup |
+|----------|----------|-------|
+| [Ollama](https://ollama.com/) | Local development, learning | `pip install` + model download |
+| [vLLM](https://docs.vllm.ai/) | High-performance inference | `pip install vllm` + GPU |
+| [Replicate](https://replicate.com) | Cloud inference, scaling | API key setup |
+
+**Adding New Providers:** Any LLM with a [LlamaIndex integration](https://docs.llamaindex.ai/en/stable/module_guides/models/llms/) can be added to the factory pattern in `llm_service.py`.
 
 ## ⚡️⚡️Quickstart ⚡️⚡️
 
