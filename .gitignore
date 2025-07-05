@@ -13,3 +13,5 @@ venv*
 *.speed
 
 __pycache__
+/allycat.iml
+/.idea/

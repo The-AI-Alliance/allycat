@@ -5,8 +5,11 @@ This guide will show you how to run and develop with AllyCat natively.
 ## Prerequisites: 
 
 - [Python 3.11 Environment](https://www.python.org/downloads/) or [Anaconda](https://www.anaconda.com/docs/getting-started/getting-started) Environment
-- Use [Ollama](https://ollama.com) if planning to run LLM locally
-- Use [Replicate](https://replicate.com) if you want to run your LLM in the cloud
+
+**Choose one LLM provider:**
+- Use [Ollama](https://ollama.com) for local LLM (easy setup, CPU/GPU)
+- Use [vLLM](https://docs.vllm.ai/) for high-performance local inference (requires GPU)
+- Use [Replicate](https://replicate.com) for cloud-based LLM service
 
 ## Step-1: Clone this repo
 
@@ -64,6 +67,19 @@ Once you have an API token, add it to the project like this:
 - Copy the file `env.sample.txt` into `.env`  (note the dot in the beginning of the filename)
 - Add your token to `REPLICATE_API_TOKEN` in the .env file.  Save this file.
 
-## Step-5: Continue to workflow
+## Step-5: vLLM Setup (Optional)
+
+For high-performance inference, you can use vLLM instead of Ollama.
+
+**Installation:**
+```bash
+pip install vllm
+```
+
+For detailed installation instructions, see the [vLLM Installation Guide](https://docs.vllm.ai/en/latest/getting_started/installation.html).
+
+**Note:** vLLM requires GPU for optimal performance. The server setup is covered in the [main workflow](running-allycat.md#42---option-2-vllm-high-performance).
+
+## Step-6: Continue to workflow
 
 Proceed to [run Allycat](running-allycat.md)
