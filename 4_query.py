@@ -12,6 +12,7 @@ from llama_index.core import VectorStoreIndex
 from llama_index.llms.replicate import Replicate
 from dotenv import load_dotenv
 from llama_index.llms.ollama import Ollama
+from llama_index.llms.openai_like import OpenAILike
 import query_utils
 import time
 
@@ -70,8 +71,18 @@ elif MY_CONFIG.LLM_RUN_ENV == 'local_ollama':
         request_timeout=30.0,
         temperature=0.1
     )
+elif MY_CONFIG.LLM_RUN_ENV == 'vllm':
+    vllm_config = MY_CONFIG.LLM_PROVIDERS['vllm']
+    llm = OpenAILike(
+        model=vllm_config['model'],
+        api_key=vllm_config['api_key'],
+        api_base=vllm_config['api_base'],
+        temperature=vllm_config.get('temperature', 0.1),
+        context_window=vllm_config.get('context_window', 8192),
+        is_chat_model=vllm_config.get('is_chat_model', True)
+    )
 else:
-    raise ValueError("❌ Invalid LLM run environment. Please set it to 'replicate' or 'local_ollama'.")
+    raise ValueError("❌ Invalid LLM run environment. Please set it to 'replicate', 'local_ollama', or 'vllm'.")
 print("✅ LLM run environment: ", MY_CONFIG.LLM_RUN_ENV)    
 print("✅ Using LLM model : ", MY_CONFIG.LLM_MODEL)
 Settings.llm = llm

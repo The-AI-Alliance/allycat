@@ -42,37 +42,45 @@ MY_CONFIG.DB_URI = os.path.join( MY_CONFIG.WORKSPACE_DIR, 'rag_website_milvus.db
 MY_CONFIG.COLLECTION_NAME = 'pages'
 
 ## ---- LLM settings ----
-## Choose one: We can do local or cloud LLMs
-# MY_CONFIG.LLM_RUN_ENV = 'replicate'  # 'replicate' or 'local_ollama'
-MY_CONFIG.LLM_RUN_ENV = 'local_ollama'  # 'replicate' or 'local_ollama'
+## Pluggable provider configuration
+MY_CONFIG.LLM_PROVIDERS = {
+    'ollama': {
+        'model': 'gemma3:1b',  # 815MB - available models: https://ollama.com/models
+        'request_timeout': 30.0,  # Optional: set to None to use default
+        'temperature': 0.1        # Optional: set to None to use default
+        # Other available models:
+        # 'qwen3:0.6b'      # 522MB
+        # 'tinyllama'       # 638MB  
+        # 'llama3.2:1b'     # 1.2GB
+        # 'qwen3:1.7b'      # 1.4 GB
+        # 'gemma3:2b'       # 1.5GB
+        # 'gemma3:4b'       # 3.3GB
+        # 'llama3.2:8b'     # 8.1GB
+        # 'gemma3:8b'       # 8.1GB
+    },
+    'replicate': {
+        'model': 'meta/meta-llama-3-8b-instruct',  # available models: https://replicate.com/explore
+        'temperature': 0.1  # Optional: set to None to use default
+        # Other available models:
+        # 'meta/meta-llama-3-70b-instruct'
+        # 'ibm-granite/granite-3.1-2b-instruct'
+        # 'ibm-granite/granite-3.2-8b-instruct'
+    },
+    'vllm': {
+        'model': 'RedHatAI/gemma-3-4b-it-quantized.w4a16',  # Model name for vLLM
+        'api_key': 'fake',  # vLLM doesn't require real API key
+        'api_base': 'http://localhost:8000/v1',  # vLLM server URL
+        'temperature': 0.1,  # Optional: set to None to use default
+        'context_window': 8192,  # Should match your `vllm serve --max-model-len` setting
+                                 # This is for LlamaIndex's internal optimization (chunking, prompt planning)
+                                 # It doesn't control the vLLM server - just tells LlamaIndex what to expect
+        'is_chat_model': True  # Important for chat-based models
+    }
+}
 
-## -- Local LLM --
-## We will use Ollama for running local LLMs
-## Ollama: https://ollama.com/
-## 1. Install Ollama: https://ollama.com/download
-## 2. Install models: https://ollama.com/models
-## 3. If you change the ollama model here, also update this file: docker-startup.sh
-if MY_CONFIG.LLM_RUN_ENV == 'local_ollama':
-    ## available Ollama models: https://ollama.com/models
-    ## install models: ollama pull <model_name>
-    ## e.g. ollama pull gemma3:1b
-    
-    # MY_CONFIG.LLM_MODEL = "qwen3:0.6b"      # 522MB
-    # MY_CONFIG.LLM_MODEL = "tinyllama"     # 638MB
-    MY_CONFIG.LLM_MODEL = "gemma3:1b"     # 815MB
-    # MY_CONFIG.LLM_MODEL = "llama3.2:1b"   # 1.2GB
-    # MY_CONFIG.LLM_MODEL = "qwen3:1.7b"      # 1.4 GB
-    # MY_CONFIG.LLM_MODEL = "gemma3:4b"     # 3.3GB
-    # MY_CONFIG.LLM_MODEL = "llama3.2:8b"   # 8.1GB
-    # MY_CONFIG.LLM_MODEL = "gemma3:2b"     # 1.5GB
-    # MY_CONFIG.LLM_MODEL = "gemma3:4b"     # 3.3GB
-    # MY_CONFIG.LLM_MODEL = "gemma3:8b"     # 8.1GB
+## Active provider - change this to switch providers
+MY_CONFIG.ACTIVE_PROVIDER = 'vllm'  # 'ollama', 'replicate', or 'vllm'
 
-
-if MY_CONFIG.LLM_RUN_ENV == 'replicate':
-    ## LLM Model for replicate service
-    ## available models: https://replicate.com/explore
-    MY_CONFIG.LLM_MODEL = "meta/meta-llama-3-8b-instruct"
-    # MY_CONFIG.LLM_MODEL = "meta/meta-llama-3-70b-instruct"
-    # MY_CONFIG.LLM_MODEL = "ibm-granite/granite-3.1-2b-instruct"
-    # MY_CONFIG.LLM_MODEL = "ibm-granite/granite-3.2-8b-instruct"
+## Legacy support - for backwards compatibility with existing code
+MY_CONFIG.LLM_RUN_ENV = 'local_ollama' if MY_CONFIG.ACTIVE_PROVIDER == 'ollama' else MY_CONFIG.ACTIVE_PROVIDER
+MY_CONFIG.LLM_MODEL = MY_CONFIG.LLM_PROVIDERS[MY_CONFIG.ACTIVE_PROVIDER]['model']

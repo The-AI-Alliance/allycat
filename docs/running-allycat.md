@@ -95,19 +95,28 @@ python   3_save_to_vector_db.py
 
 For this step, we need an LLM.
 
-We have two options for running an LLM.
+We have three options for running an LLM:
 
-1. Running an open LLM locally using Ollama.  This is FREE and doesn't require any API access (default option)
-2. Using a service like [Replicate](https://replicate.com)
+1. **Local Ollama** - Running an open LLM locally using Ollama. This is FREE and doesn't require any API access (default option)
+2. **vLLM** - High-performance inference server for running models locally with better throughput
+3. **Replicate** - Cloud-based inference service
 
+### Configuration Overview
 
-### 4.1 - Option 1: local Ollama (default) 
-
-File: [my_config.py](../my_config.py):
+All LLM configuration is now centralized in [my_config.py](../my_config.py). You only need to change the `ACTIVE_PROVIDER` setting:
 
 ```python
-MY_CONFIG.LLM_RUN_ENV = 'local_ollama'
-MY_CONFIG.LLM_MODEL = "gemma3:1b" 
+MY_CONFIG.ACTIVE_PROVIDER = 'ollama'    # or 'vllm' or 'replicate'
+```
+
+The application will automatically use the correct provider configuration without needing to modify any code files.
+
+### 4.1 - Option 1: Local Ollama (default) 
+
+Set in [my_config.py](../my_config.py):
+
+```python
+MY_CONFIG.ACTIVE_PROVIDER = 'ollama'
 ```
 
 - If you are running the Allycat docker image, then Ollama is already installed.  
@@ -125,16 +134,46 @@ ollama   pull gemma3:1b
 ollama  list
 ```
 
-Sample output might look like:
+### 4.2 - Option 2: vLLM (high performance)
 
-
-### 4.2 - Option 2: For using Replicate
-
-File: [my_config.py](../my_config.py):
+Set in [my_config.py](../my_config.py):
 
 ```python
-MY_CONFIG.LLM_RUN_ENV = 'replicate'
-MY_CONFIG.LLM_MODEL = "meta/meta-llama-3-8b-instruct"
+MY_CONFIG.ACTIVE_PROVIDER = 'vllm'
+```
+
+**Installing vLLM:**
+
+For installation instructions, see the [vLLM Installation Guide](https://docs.vllm.ai/en/latest/getting_started/installation.html).
+
+Quick install for most systems:
+```bash
+pip install vllm
+```
+
+**Running vLLM Server:**
+
+Before running AllyChat, start the vLLM server:
+
+```bash
+# Example: Start vLLM server with the configured model
+vllm serve RedHatAI/gemma-3-4b-it-quantized.w4a16 --max-model-len 8192
+
+# Server will be available at http://localhost:8000
+```
+
+**Key Points:**
+- vLLM provides higher throughput than Ollama
+- Requires GPU for best performance
+- AllyChat connects to vLLM via OpenAI-compatible API
+- The `context_window` setting in config should match your `--max-model-len` parameter
+
+### 4.3 - Option 3: Replicate (cloud service)
+
+Set in [my_config.py](../my_config.py):
+
+```python
+MY_CONFIG.ACTIVE_PROVIDER = 'replicate'
 ```
 
 Also make sure that you have completed [replicate setup](running-natively.md#step-4-replicate-setup-optional)
