@@ -50,7 +50,9 @@ MY_CONFIG.COLLECTION_NAME = 'pages'
 ## Cloud LLMs are run on any LiteLLM supported service like Replicate / Nebius / etc
 ## For running Ollama locally, please check the instructions in the docs/ollama.md file
 
-MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/gemma3:1b')
+# TOM:
+# MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/gemma3:1b')
+MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/granite3-dense:2b') # 1.6GB
 
 ## --- UI settings ---
 MY_CONFIG.STARTER_PROMPTS_STR = os.getenv("UI_STARTER_PROMPTS", 'What is this website?  |  What are upcoming events?  | Who are some of the partners?')
