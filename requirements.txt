@@ -30,3 +30,7 @@ ipykernel
 
 # UI - chainlit
 chainlit
+
+# NLIP - should be sibling directories
+../nlip_sdk
+../nlip_server
