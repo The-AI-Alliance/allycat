@@ -21,6 +21,7 @@ MY_CONFIG.CRAWL_MAX_DEPTH = 3
 MY_CONFIG.WAITTIME_BETWEEN_REQUESTS = int(os.getenv("WAITTIME_BETWEEN_REQUESTS", 0.1)) # in seconds
 MY_CONFIG.CRAWL_MIME_TYPE = 'text/html'
 
+
 ## Directories
 MY_CONFIG.WORKSPACE_DIR = os.path.join(os.getenv('WORKSPACE_DIR', 'workspace'))
 MY_CONFIG.CRAWL_DIR = os.path.join( MY_CONFIG.WORKSPACE_DIR, "crawled")
@@ -46,13 +47,23 @@ MY_CONFIG.COLLECTION_NAME = 'pages'
 
 ## ---- LLM settings ----
 ## Choose one: We can do local or cloud LLMs
+# LLM_RUN_ENV controls which LLM backend to use: 'local_ollama' for local Ollama, 'replicate' for Replicate cloud LLMs
+# Set LLM_RUN_ENV in your .env file. Default is 'local_ollama' for local development.
 ## Local LLMs are run on your machine using Ollama
 ## Cloud LLMs are run on any LiteLLM supported service like Replicate / Nebius / etc
 ## For running Ollama locally, please check the instructions in the docs/ollama.md file
 
+
+MY_CONFIG.LLM_RUN_ENV = os.getenv("LLM_RUN_ENV", "local_ollama")
+
 MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/gemma3:1b')
+
+# Replicate API token (if using Replicate)
+MY_CONFIG.REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN", None)
+# Nebius API key (if using Nebius)
+MY_CONFIG.NEBIUS_API_KEY = os.getenv("NEBIUS_API_KEY", None)
+
 
 ## --- UI settings ---
 MY_CONFIG.STARTER_PROMPTS_STR = os.getenv("UI_STARTER_PROMPTS", 'What is this website?  |  What are upcoming events?  | Who are some of the partners?')
 MY_CONFIG.STARTER_PROMPTS = MY_CONFIG.STARTER_PROMPTS_STR.split("|") if MY_CONFIG.STARTER_PROMPTS_STR else []
-

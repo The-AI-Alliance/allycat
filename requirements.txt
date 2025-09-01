@@ -30,3 +30,6 @@ ipykernel
 
 # UI - chainlit
 chainlit
+
+# Environment variables
+python-dotenv
