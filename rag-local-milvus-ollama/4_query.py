@@ -1,4 +1,8 @@
 import os
+import sys
+# add common to path
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'common'))
+
 from my_config import MY_CONFIG
 
 # If connection to https://huggingface.co/ failed, uncomment the following path
@@ -11,7 +15,7 @@ from llama_index.vector_stores.milvus import MilvusVectorStore
 from llama_index.core import VectorStoreIndex
 from dotenv import load_dotenv
 from llama_index.llms.litellm import LiteLLM
-import query_utils
+import query_utils as query_utils
 import time
 import logging
 import json

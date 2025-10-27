@@ -37,8 +37,8 @@ MY_CONFIG.EMBEDDING_MODEL =  os.getenv("EMBEDDING_MODEL", 'ibm-granite/granite-e
 MY_CONFIG.EMBEDDING_LENGTH = int(os.getenv("EMBEDDING_LENGTH", 384))
 
 ## Chunking
-MY_CONFIG.CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", 512))
-MY_CONFIG.CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", 20))
+MY_CONFIG.CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", 1024))
+MY_CONFIG.CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", 100))
 
 
 ### Milvus config
@@ -46,17 +46,15 @@ MY_CONFIG.DB_URI = os.path.join( MY_CONFIG.WORKSPACE_DIR, 'rag_website_milvus.db
 MY_CONFIG.COLLECTION_NAME = 'pages'
 
 ## ---- LLM settings ----
-## Choose one: We can do local or cloud LLMs
-# LLM_RUN_ENV controls which LLM backend to use: 'local_ollama' for local Ollama, 'replicate' for Replicate cloud LLMs
-# Set LLM_RUN_ENV in your .env file. Default is 'local_ollama' for local development.
+## We use LiteLLM  which supports multiple LLM backends, including local and cloud LLMs.
 ## Local LLMs are run on your machine using Ollama
 ## Cloud LLMs are run on any LiteLLM supported service like Replicate / Nebius / etc
-## For running Ollama locally, please check the instructions in the docs/ollama.md file
+## For running Ollama locally, please check the instructions in the docs/llm-local.md file
 
 
-MY_CONFIG.LLM_RUN_ENV = os.getenv("LLM_RUN_ENV", "local_ollama")
 
-MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/gemma3:1b')
+# MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/gemma3:1b')
+MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/qwen3:0.6b')
 
 # Replicate API token (if using Replicate)
 MY_CONFIG.REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN", None)

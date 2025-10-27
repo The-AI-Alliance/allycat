@@ -14,7 +14,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 from llama_index.llms.litellm import LiteLLM
 from my_config import MY_CONFIG
-import query_utils
+import common.query_utils as query_utils
 
 # Global variables for LLM and index
 vector_index = None

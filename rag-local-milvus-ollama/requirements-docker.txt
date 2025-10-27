@@ -1,12 +1,4 @@
-## Data prep toolkit
-data-prep-toolkit-transforms[html2parquet]==1.1.0
-data-prep-toolkit-transforms[web2parquet]==1.1.0
-data-prep-connector
-trafilatura
-
 docling
-
-nest_asyncio
 
 ## pytorch - cpu version (much lighter than GPU version)
 --extra-index-url https://download.pytorch.org/whl/cpu
@@ -16,16 +8,9 @@ torch==2.6.0+cpu
 pymilvus==2.5.5
 milvus-lite==2.4.11
 
-## Weaviate DB
-# weaviate-client
-
-## --- Replicate
-replicate
-
 ## --- llama-index
 llama-index
 llama-index-embeddings-huggingface
-llama-index-llms-replicate
 llama-index-llms-ollama
 llama-index-vector-stores-milvus==0.5.0
 

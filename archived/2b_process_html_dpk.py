@@ -8,7 +8,7 @@ import os
 import sys
 import shutil
 from dpk_html2parquet.transform_python import Html2Parquet
-from file_utils import read_parquet_files_as_df
+from common.file_utils import read_parquet_files_as_df
 
 from my_config import MY_CONFIG
 

@@ -1,5 +1,9 @@
-from my_config import MY_CONFIG
 import os
+import sys
+# add ../common to path
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'common'))
+
+from my_config import MY_CONFIG
 import glob
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core import Document

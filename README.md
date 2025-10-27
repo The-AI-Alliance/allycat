@@ -22,22 +22,29 @@ AllyCat also includes web scraping tools that extract data from your website (or
 
 ## 🌟🌟 Features 🌟🌟 
 
-1. Chatbot with interface to answer questions with text scraped from a website.
-2. Includes web crawling & scraping, text extraction, data/HTML processing, conversion to markdown.
-   - **Currently uses:** [Data Prep Kit Connector](https://github.com/data-prep-kit/data-prep-kit/blob/dev/data-connector-lib/doc/overview.md) and [Docling](https://github.com/docling-project/docling)
-3. Processing Chunking, vector embedding creation, saving to vector database.
-   - **Currently uses:** [Llama Index](https://docs.llamaindex.ai/en/stable/) and [Granite Embedding Model](https://huggingface.co/ibm-granite/granite-embedding-30m-english)
-4. Supports multiple LLMs.
-   - **Currently:** [Llama](https://www.llama.com) or [Granite](https://huggingface.co/collections/ibm-granite/granite-33-language-models-67f65d0cca24bcbd1d3a08e3)
-5. Supports multiple vector databases.
-   - **Currently:** [Milvus](https://milvus.io/) or [Weaviate](https://weaviate.io)
-6. End User and New Contributor Friendly.
-   - **Currently:** Run locally with [Ollama](https://ollama.com/), or as-a-service on [Replicate](https://replicate.com)
+1. Web crawler to download content from website
+2. HTML processing/cleanup, text extraction and conversion to markdown. Uses [Docling](https://github.com/docling-project/docling)
+3. Chunking, vector embedding creation, saving to vector database.  Uses [Llama Index](https://docs.llamaindex.ai/en/stable/) and [Granite Embedding Model](https://huggingface.co/ibm-granite/granite-embedding-30m-english)
+4. Supports multiple vector databases. [Milvus](https://milvus.io/) or [Weaviate](https://weaviate.io)
+5. Use local LLMs using [Ollama](https://ollama.com/) or use any inference service.  Uses [LiteLLM](https://www.litellm.ai/)
+6. Chatbot with interface to answer questions with text scraped from a website.
+7. End User and New Contributor Friendly.
 
 ## ⚡️⚡️Quickstart ⚡️⚡️
 
-There are two ways to run Allycat.
+You can run allycat in following settings:
 
+| Setup                                              | Stack                             | Description                                   |
+|----------------------------------------------------|-----------------------------------|-----------------------------------------------|
+| [RAG (local) 1](rag-local-milvus-ollama/README.md) | Milvus (DB) + Ollama (LLMs)       | Everything runs locally.  No API keys needed. |
+
+
+<!-- 
+| [Graph RAG local](#)                               | Neo4J (db) + Ollama (LLMs)        | Everything runs locally.  No API keys needed. |
+| [Graph RAG remote 1](#)                            | Neo4J (db) + Inference  providers | Services run on the cloud                     | 
+-->
+
+<!-- 
 ### Option 1: Use the Docker image
 
 A great option for a quick evaluation.  
@@ -46,7 +53,8 @@ See [running AllyCat using docker](docs/running-in-docker.md)
 ### Option 2: Run natively (for tweaking, developing)
 
 Choose this option if you want to tweak AllyCat to fit your needs. For example, experimenting with embedding models or LLMs.  
-See [running AllyCat natively](docs/running-natively.md)
+See [running AllyCat natively](docs/running-natively.md) 
+-->
 
 ## AllyCat Workflow
 
