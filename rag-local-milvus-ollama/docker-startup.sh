@@ -9,7 +9,7 @@ echo "Env variables for OLLAMA"
 env | grep OLLAMA
 
 # start ollama
-# ollama_model="qwen3:1.7b"
+# ollama_model=" qwen3:0.6b"
 ollama_model="gemma3:1b"
 echo "Starting Ollama..."
 ollama serve   > /allycat/ollama-serve.out  2>&1 &

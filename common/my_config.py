@@ -53,13 +53,8 @@ MY_CONFIG.COLLECTION_NAME = 'pages'
 
 
 
-# MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/gemma3:1b')
-MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/qwen3:0.6b')
-
-# Replicate API token (if using Replicate)
-MY_CONFIG.REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN", None)
-# Nebius API key (if using Nebius)
-MY_CONFIG.NEBIUS_API_KEY = os.getenv("NEBIUS_API_KEY", None)
+MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/gemma3:1b')
+# MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'ollama/qwen3:0.6b')
 
 
 ## --- UI settings ---

@@ -3,6 +3,7 @@ __pycache__/
 .git/
 .idea/
 venv*/
+.venv
 .vscode
 .directory
 # workspace/

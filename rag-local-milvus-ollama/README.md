@@ -109,7 +109,7 @@ Here is how:
 
 ```bash
 # download the model
-ollama   pull qwen3:0.6b
+# ollama   pull qwen3:0.6b
 ollama   pull gemma3:1b
 
 # verify the model is available locally
@@ -122,11 +122,11 @@ Start Ollama server by
 ollama serve
 ```
 
-And configure the model to use in .env file.
+**(Optional)** And configure the model to use in .env file.
 
 ```python
-# LLM_MODEL = 'ollama/gemma3:1b'
-LLM_MODEL = 'ollamaqwen3:0.6b'
+LLM_MODEL = 'ollama/gemma3:1b'
+# LLM_MODEL = 'ollama/qwen3:0.6b'
 ```
 
 
@@ -137,6 +137,27 @@ LLM_MODEL = 'ollamaqwen3:0.6b'
 
 ```bash
 python  4_query.py
+```
+
+---
+
+## Pacaking the app to deploy
+
+We will create a docker image of the app.  It will package up the code + data
+
+Note:  Be sure to run the docker command from the root of the project.
+
+```bash
+cd  <project root dir>
+docker  build  -f rag-local-milvus-ollama/Dockerfile  -t allycat  .
+```
+
+## Run the AllyCat Docker
+
+Let's start the docker in 'dev' mode
+
+```bash
+docker run -it --rm -p 8080:8080  -v allycat-vol1:/allycat/workspace  sujee/allycat
 ```
 
 ---

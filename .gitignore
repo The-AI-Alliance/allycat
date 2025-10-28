@@ -2,6 +2,7 @@ workspace/
 *.out*
 .directory
 venv*
+.venv*
 .vscode
 tmp
 
