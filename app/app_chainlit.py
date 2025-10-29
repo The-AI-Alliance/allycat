@@ -1,5 +1,9 @@
-import chainlit as cl
 import os
+import sys
+# add ../common to path
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'common'))
+
+import chainlit as cl
 import logging
 from dotenv import load_dotenv
 import time
@@ -14,7 +18,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 from llama_index.llms.litellm import LiteLLM
 from my_config import MY_CONFIG
-import common.query_utils as query_utils
+import query_utils as query_utils
 
 # Global variables for LLM and index
 vector_index = None

@@ -34,6 +34,7 @@ RUN curl -fsSL https://ollama.com/install.sh | sh
 # Copy project files
 COPY rag-local-milvus-ollama/ .
 COPY common/ .
+COPY app/ .
 RUN chmod +x ./docker-startup.sh
 
 # Create a non-root user and switch to it

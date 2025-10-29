@@ -17,3 +17,4 @@ tmp
 __pycache__
 
 chainlit.md
+.chainlit/

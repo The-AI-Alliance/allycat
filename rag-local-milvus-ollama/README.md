@@ -139,9 +139,27 @@ LLM_MODEL = 'ollama/gemma3:1b'
 python  4_query.py
 ```
 
+## Step-9: Run Web UI
+
+**Option 1: Flask UI**
+
+```bash
+python ../app/app_flask.py
+```
+
+Go to url : http://localhost:8080  and start chatting!
+
+**Option 2: Chainlit UI**
+
+```bash
+chainlit run ../app/app_chainlit.py --port 8090
+```
+
+Go to url : http://localhost:8090  and start chatting!
+
 ---
 
-## Pacaking the app to deploy
+## Packaging the app to deploy
 
 We will create a docker image of the app.  It will package up the code + data
 
@@ -157,8 +175,12 @@ docker  build  -f rag-local-milvus-ollama/Dockerfile  -t allycat  .
 Let's start the docker in 'dev' mode
 
 ```bash
-docker run -it --rm -p 8080:8080  -v allycat-vol1:/allycat/workspace  sujee/allycat
+docker run -it --rm -p 8090:8090  -p 8080:8080  allycat
+# docker run -it --rm -p 8090:8090  -v allycat-vol1:/allycat/workspace  sujee/allycat
 ```
+
+`deploy` option starts ollama server and web UI.
+
 
 ---
 
