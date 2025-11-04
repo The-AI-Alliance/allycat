@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements file
-COPY rag-local-milvus-ollama/requirements-docker.txt .
+COPY requirements-docker.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements-docker.txt
@@ -32,9 +32,7 @@ RUN pip install --no-cache-dir -r requirements-docker.txt
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
 # Copy project files
-COPY rag-local-milvus-ollama/ .
-COPY common/ .
-COPY app/ .
+COPY . .
 RUN chmod +x ./docker-startup.sh
 
 # Create a non-root user and switch to it

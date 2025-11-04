@@ -51,14 +51,14 @@ Note: Allycat will work fine without an `.env` file
 
 This step will crawl a site and download the website content into the `workspace/crawled` directory
 
-code: [../common/1_crawl_site.py](../common/1_crawl_site.py)
+code: [1_crawl_site.py](1_crawl_site.py)
 
 
 ```bash
 # default settings
-python     ../common/1_crawl_site.py  --url https://thealliance.ai
+python     1_crawl_site.py  --url https://thealliance.ai
 # or specify parameters
-python  ../commom/1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --max-depth 5
+python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --max-depth 5
 ```
 
 ## Step-5: Process Downloaded files
@@ -67,11 +67,11 @@ We will process the downloaded files (html / pdf) and extract the text as markdo
 
 We use [Docling](https://github.com/docling-project/docling) to process downloaded files.  It will convert the files into markdown format for easy digestion.
 
-- Use python script: [../common/2_process_files.py](../common/2_process_files.py)
-- or (For debugging) Run notebook :  [../common/2_process_files.ipynb](../common/2_process_files.ipynb)  
+- Use python script: [2_process_files.py](2_process_files.py)
+- or (For debugging) Run notebook :  [2_process_files.ipynb](2_process_files.ipynb)  
 
 ```bash
-python   ../common/2_process_files.py
+python   2_process_files.py
 ```
 
 ---
@@ -144,7 +144,7 @@ python  4_query.py
 **Option 1: Flask UI**
 
 ```bash
-python ../app/app_flask.py
+python app_flask.py
 ```
 
 Go to url : http://localhost:8080  and start chatting!
@@ -152,7 +152,7 @@ Go to url : http://localhost:8080  and start chatting!
 **Option 2: Chainlit UI**
 
 ```bash
-chainlit run ../app/app_chainlit.py --port 8090
+chainlit run app_chainlit.py --port 8090
 ```
 
 Go to url : http://localhost:8090  and start chatting!
@@ -166,8 +166,7 @@ We will create a docker image of the app.  It will package up the code + data
 Note:  Be sure to run the docker command from the root of the project.
 
 ```bash
-cd  <project root dir>
-docker  build  -f rag-local-milvus-ollama/Dockerfile  -t allycat  .
+docker  build    -t allycat  .
 ```
 
 ## Run the AllyCat Docker
@@ -175,7 +174,7 @@ docker  build  -f rag-local-milvus-ollama/Dockerfile  -t allycat  .
 Let's start the docker in 'dev' mode
 
 ```bash
-docker run -it --rm -p 8090:8090  -p 8080:8080  allycat
+docker run -it --rm -p 8090:8090  -p 8080:8080  allycat  deploy
 # docker run -it --rm -p 8090:8090  -v allycat-vol1:/allycat/workspace  sujee/allycat
 ```
 
