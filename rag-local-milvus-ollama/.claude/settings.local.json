@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(if [ -d .venv ])",
+      "Bash(then ls -la .venv/bin/)",
+      "Bash(fi)",
+      "Bash(if [ -f .venv/pyvenv.cfg ])",
+      "Bash(then cat .venv/pyvenv.cfg)",
+      "Bash(if [ -f pyproject.toml ])",
+      "Bash(then cat pyproject.toml)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -29,7 +29,7 @@ if [ "$1" == "deploy" ]; then
   echo "Starting web server..."
   # run the web server in foreground so the container doesn't exit
   # python3 app_flask.py 
-  chainlit run app_chainlit.py --port 8090
+  chainlit run app_chainlit.py --host 0.0.0.0 --port 8090 --headless
   # python3 app_flask.py > /allycat/app.out 2>&1 &
   # # wait for the web server to start
   # while ! nc -z localhost 8080; do
