@@ -53,6 +53,8 @@ Install [Anaconda](https://www.anaconda.com/) or [conda forge](https://conda-for
 And then:
 
 ```bash
+cd   allycat/rag-local-milvus-ollama
+
 conda create -n allycat-1  python=3.12
 conda activate  allycat-1
 pip install -r requirements.txt 
