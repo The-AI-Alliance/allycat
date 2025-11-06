@@ -7,7 +7,8 @@
         - [2.2 -  Option 2: Using python virtual env](#22----option-2-using-python-virtual-env)
         - [2.3 -  Option 3: Setup using Anaconda Environment](#23----option-3-setup-using-anaconda-environment)
         - [Optional - Create a Jupyter Kernel](#optional---create-a-jupyter-kernel)
-    - [Step-3: Install Ollama](#step-3-install-ollama)
+    - [Step-3: Activate your Python env](#step-3-activate-your-python-env)
+    - [Step-4: Install Ollama](#step-4-install-ollama)
 
 
 ## Step-1: Get the code
@@ -69,7 +70,23 @@ python -m ipykernel install --user --name=allycat-1 --display-name "allycat-1"
 ## Choose this kernel 'allycat-1' within jupyter / vscode
 ```
 
-## Step-3: Install Ollama
+## Step-3: Activate your Python env
+
+
+Don't forget to activate your python env
+
+```bash
+## if using uv
+source .venv/bin/activate
+
+## if using python venv
+source  .venv/bin/activate
+
+## If using conda
+conda  activate  allycat-1  # what ever the name of the env
+```
+
+## Step-4: Install Ollama
 
 We will use [ollama](https://ollama.com/) run LLMs locally.
 

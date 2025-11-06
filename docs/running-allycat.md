@@ -19,7 +19,7 @@ If running natively, activate your python env
 source .venv/bin/activate
 
 ## if using python venv
-source  venv/bin/activate
+source  .venv/bin/activate
 
 ## If using conda
 conda  activate  allycat-1  # what ever the name of the env

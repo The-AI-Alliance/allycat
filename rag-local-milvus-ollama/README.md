@@ -24,6 +24,20 @@ cd    allycat/rag-local-milvus-ollama
 
 [Setup python dev env](setup.md)
 
+
+**And activate your python env**
+
+```bash
+## if using uv
+source .venv/bin/activate
+
+## if using python venv
+source  .venv/bin/activate
+
+## If using conda
+conda  activate  allycat-1  # what ever the name of the env
+```
+
 ---
 
 ## Step-3: Setup `.env` file
