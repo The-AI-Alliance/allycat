@@ -30,6 +30,12 @@ AllyCat also includes web scraping tools that extract data from your website (or
 6. Chatbot with interface to answer questions with text scraped from a website.
 7. End User and New Contributor Friendly.
 
+## AllyCat Workflow
+
+![](assets/rag-website-1.png)
+
+<!-- See [running allycat](docs/running-allycat.md) -->
+
 ## ⚡️⚡️Quickstart ⚡️⚡️
 
 You can run allycat in following settings:
@@ -56,11 +62,7 @@ Choose this option if you want to tweak AllyCat to fit your needs. For example, 
 See [running AllyCat natively](docs/running-natively.md) 
 -->
 
-## AllyCat Workflow
 
-![](assets/rag-website-1.png)
-
-See [running allycat](docs/running-allycat.md)
 
 ## Customizing AllyCat
 

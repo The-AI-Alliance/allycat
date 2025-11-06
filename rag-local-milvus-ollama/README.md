@@ -22,7 +22,7 @@ cd    allycat/rag-local-milvus-ollama
 
 ## Step-2: Setup Python Dev Env
 
-[Setup python dev env](../docs/setup-python-env.md)
+[Setup python dev env](setup.md)
 
 ---
 
