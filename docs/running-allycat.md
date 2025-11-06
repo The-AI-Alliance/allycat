@@ -19,7 +19,7 @@ If running natively, activate your python env
 source .venv/bin/activate
 
 ## if using python venv
-source  venv/bin/activate
+source  .venv/bin/activate
 
 ## If using conda
 conda  activate  allycat-1  # what ever the name of the env
@@ -50,7 +50,7 @@ code: [1_crawl_site.py](1_crawl_site.py)
 # default settings
 python     1_crawl_site.py  --url https://thealliance.ai
 # or specify parameters
-python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --max-depth 5
+python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --depth 5
 ```
 
 

@@ -4,6 +4,7 @@ workspace/
 venv*
 .venv*
 .vscode
+.claude
 tmp
 
 .env*

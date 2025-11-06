@@ -22,7 +22,21 @@ cd    allycat/rag-local-milvus-ollama
 
 ## Step-2: Setup Python Dev Env
 
-[Setup python dev env](../docs/setup-python-env.md)
+[Setup python dev env](setup.md)
+
+
+**And activate your python env**
+
+```bash
+## if using uv
+source .venv/bin/activate
+
+## if using python venv
+source  .venv/bin/activate
+
+## If using conda
+conda  activate  allycat-1  # what ever the name of the env
+```
 
 ---
 
@@ -58,7 +72,7 @@ code: [1_crawl_site.py](1_crawl_site.py)
 # default settings
 python     1_crawl_site.py  --url https://thealliance.ai
 # or specify parameters
-python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --max-depth 5
+python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --depth 5
 ```
 
 ## Step-5: Process Downloaded files
