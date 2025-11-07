@@ -10,7 +10,7 @@ This setup runs every thing locally.  No API keys required.
 | [Ollama](https://ollama.com/)            | LLM runtime   |
 
 
-## Step-1: Clone this repo
+## Step-1: Get the code
 
 ```bash
 # Substitute appropriate repo URL
@@ -20,9 +20,9 @@ cd    allycat/rag-local-milvus-ollama
 
 ---
 
-## Step-2: Setup Python Dev Env
+## Step-2: Setup Env
 
-[Setup python dev env](setup.md)
+Follow the [Setup](setup.md) guide.
 
 
 **And activate your python env**
@@ -40,7 +40,7 @@ conda  activate  allycat-1  # what ever the name of the env
 
 ---
 
-## Step-3: Setup `.env` file
+## Step-3: (Optional) Setup `.env` file
 
 **This step is optional**.  Allycat runs fine with default configuration options.  You can customize them to fit your needs.
 
@@ -173,23 +173,30 @@ Go to url : http://localhost:8090  and start chatting!
 
 ---
 
-## Packaging the app to deploy
+## Step-10: Turn the RAG into MCP 
+
+[MCP server code](mcp_server.py)  
+[MCP client code](mcp_client.py)
+
+Read more on [rag --> mcp](mcp.md)
+
+## Step-11: Packaging the app to deploy
 
 We will create a docker image of the app.  It will package up the code + data
 
 Note:  Be sure to run the docker command from the root of the project.
 
 ```bash
-docker  build    -t allycat  .
+docker  build    -t allycat-local  .
 ```
 
-## Run the AllyCat Docker
+## Step-12: Run the AllyCat Docker
 
 Let's start the docker in 'dev' mode
 
 ```bash
-docker run -it --rm -p 8090:8090  -p 8080:8080  allycat  deploy
-# docker run -it --rm -p 8090:8090  -v allycat-vol1:/allycat/workspace  sujee/allycat
+docker run -it --rm -p 8090:8090  -p 8080:8080  allycat-local  deploy
+# docker run -it --rm -p 8090:8090  -v allycat-vol1:/allycat/workspace  allycat-local
 ```
 
 `deploy` option starts ollama server and web UI.
@@ -200,6 +207,8 @@ docker run -it --rm -p 8090:8090  -p 8080:8080  allycat  deploy
 ## Dev Notes
 
 ### Creating `requirements.txt` using uv
+
+When we update uv deps, run this command to update requirements.txt
 
 ```bash
 uv export --frozen --no-hashes --no-emit-project --no-default-groups --output-file=requirements.txt
