@@ -1,0 +1,909 @@
+2025-11-06 22:13:13,688 - INFO - 
+================================================================================
+PHASE 1: Entity & Relationship Extraction
+================================================================================
+Time: 2025-11-06 22:13:13
+Provider: NEBIUS | Model: meta-llama/Llama-3.3-70B-Instruct
+Context: 131,072 tokens
+Input: workspace/processed
+Output: workspace/graph_data/phase1_output.json
+Log: process_graphdata/logs/phase1_extraction_20251106_221008.log
+================================================================================
+
+2025-11-06 22:13:14,569 - INFO - Initialized meta-llama/Llama-3.3-70B-Instruct (nebius) - 131072tok input, 8000tok output
+2025-11-06 22:13:14,570 - INFO - Extraction: 5-15 entities, 3-8 relationships (confidence≥0.8)
+2025-11-06 22:13:14,586 - INFO - 
+============================================================
+2025-11-06 22:13:14,586 - INFO - Scanning markdown files
+2025-11-06 22:13:14,587 - INFO - ============================================================
+
+2025-11-06 22:13:14,607 - INFO - thealliance.ai__about-aia.md: 8,694 chars (~2,173 tokens)
+2025-11-06 22:13:14,629 - INFO - thealliance.ai__affiliated-projects.md: 6,965 chars (~1,741 tokens)
+2025-11-06 22:13:14,651 - INFO - thealliance.ai__affiliated-projects__bigcode.md: 5,080 chars (~1,270 tokens)
+2025-11-06 22:13:14,672 - INFO - thealliance.ai__affiliated-projects__cornell_generative.md: 4,663 chars (~1,165 tokens)
+2025-11-06 22:13:14,692 - INFO - thealliance.ai__affiliated-projects__ibm_granite.md: 5,686 chars (~1,421 tokens)
+2025-11-06 22:13:14,713 - INFO - thealliance.ai__affiliated-projects__mbzuai_llm.md: 5,032 chars (~1,258 tokens)
+2025-11-06 22:13:14,733 - INFO - thealliance.ai__affiliated-projects__quansight_ragna.md: 6,436 chars (~1,609 tokens)
+2025-11-06 22:13:14,753 - INFO - thealliance.ai__affiliated-projects__trusty_ai.md: 4,973 chars (~1,243 tokens)
+2025-11-06 22:13:14,772 - INFO - thealliance.ai__ai-alliance-open-innovation-principles.md: 8,476 chars (~2,119 tokens)
+2025-11-06 22:13:14,797 - INFO - thealliance.ai__aia-members.md: 25,788 chars (~6,447 tokens)
+2025-11-06 22:13:14,802 - INFO - thealliance.ai__become-a-collaborator.md: 5,636 chars (~1,409 tokens)
+2025-11-06 22:13:14,824 - INFO - thealliance.ai__blog.md: 11,364 chars (~2,841 tokens)
+2025-11-06 22:13:14,844 - INFO - thealliance.ai__blog__advancing-domain-specific-qa-the-ai-alliances-guide.md: 13,430 chars (~3,357 tokens)
+2025-11-06 22:13:14,865 - INFO - thealliance.ai__blog__ai-alliance-accelerating-open-source-ai-innovation.md: 11,458 chars (~2,864 tokens)
+2025-11-06 22:13:14,886 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-japan-fair-trade-commission-discussion-paper-on-generative-ai-and-competition.md: 6,002 chars (~1,500 tokens)
+2025-11-06 22:13:14,907 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-the-rfi-on-the-development-of-an-ai-action-plan.md: 6,092 chars (~1,523 tokens)
+2025-11-06 22:13:14,930 - INFO - thealliance.ai__blog__ai-alliance-expands-with-seven-new-members-from-in.md: 14,959 chars (~3,739 tokens)
+2025-11-06 22:13:14,951 - INFO - thealliance.ai__blog__ai-alliance-skills-and-education-working-group-intro.md: 11,634 chars (~2,908 tokens)
+2025-11-06 22:13:14,972 - INFO - thealliance.ai__blog__ai-alliance-urges-lawmakers-to-rethink-the-ny-raise-act.md: 7,627 chars (~1,906 tokens)
+2025-11-06 22:13:14,980 - INFO - thealliance.ai__blog__ai-for-drug-discovery-open-innovation-forum.md: 7,953 chars (~1,988 tokens)
+2025-11-06 22:13:15,001 - INFO - thealliance.ai__blog__alliance_launch.md: 38,704 chars (~9,676 tokens)
+2025-11-06 22:13:15,022 - INFO - thealliance.ai__blog__architecture-of-data-prep-kit-framework.md: 34,083 chars (~8,520 tokens)
+2025-11-06 22:13:15,043 - INFO - thealliance.ai__blog__defining-open-source-ai-the-road-ahead.md: 14,084 chars (~3,521 tokens)
+2025-11-06 22:13:15,063 - INFO - thealliance.ai__blog__dept-commerce-ntia-report-on-open-weights-models.md: 9,618 chars (~2,404 tokens)
+2025-11-06 22:13:15,086 - INFO - thealliance.ai__blog__doomarena-a-security-testing-framework-for-ai-agen.md: 16,083 chars (~4,020 tokens)
+2025-11-06 22:13:15,108 - INFO - thealliance.ai__blog__evaluation-of-generative-ai---whats-ultimately-our.md: 22,386 chars (~5,596 tokens)
+2025-11-06 22:13:15,130 - INFO - thealliance.ai__blog__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: 5,942 chars (~1,485 tokens)
+2025-11-06 22:13:15,150 - INFO - thealliance.ai__blog__from-layout-to-logic-how-docling-is-redefining-doc.md: 14,549 chars (~3,637 tokens)
+2025-11-06 22:13:15,172 - INFO - thealliance.ai__blog__getting-started-with-ai-trust-and-safety.md: 9,977 chars (~2,494 tokens)
+2025-11-06 22:13:15,193 - INFO - thealliance.ai__blog__ictp-announces-ai-prize-for-science-an-ai-alliance.md: 12,510 chars (~3,127 tokens)
+2025-11-06 22:13:15,200 - INFO - thealliance.ai__blog__introducing-the-ai-alliance-open-innovation-principles.md: 7,601 chars (~1,900 tokens)
+2025-11-06 22:13:15,239 - INFO - thealliance.ai__blog__llm-as-a-judge-without-the-headaches-evalassist-br.md: 12,360 chars (~3,090 tokens)
+2025-11-06 22:13:15,261 - INFO - thealliance.ai__blog__mastering-data-cleaning-for-fine-tuning-llms-and-r.md: 18,117 chars (~4,529 tokens)
+2025-11-06 22:13:15,282 - INFO - thealliance.ai__blog__navigating-the-ai-risk-labyrinth.md: 12,996 chars (~3,249 tokens)
+2025-11-06 22:13:15,305 - INFO - thealliance.ai__blog__open-source-ai-demo-night-sf-2024.md: 10,266 chars (~2,566 tokens)
+2025-11-06 22:13:15,325 - INFO - thealliance.ai__blog__open-trusted-wikimedia-datasets-by-wikimedia-enter.md: 11,498 chars (~2,874 tokens)
+2025-11-06 22:13:15,346 - INFO - thealliance.ai__blog__our-first-year.md: 27,868 chars (~6,967 tokens)
+2025-11-06 22:13:15,366 - INFO - thealliance.ai__blog__pleias-releases-common-corpus-open-multilingual-dataset-for-llm-training.md: 18,477 chars (~4,619 tokens)
+2025-11-06 22:13:15,387 - INFO - thealliance.ai__blog__public-statement-on-possible-veto-of-sb-1047.md: 8,423 chars (~2,105 tokens)
+2025-11-06 22:13:15,407 - INFO - thealliance.ai__blog__spotlight-on-raphael-vienne.md: 8,988 chars (~2,247 tokens)
+2025-11-06 22:13:15,428 - INFO - thealliance.ai__blog__spotlight-on-sean-hughes.md: 10,425 chars (~2,606 tokens)
+2025-11-06 22:13:15,449 - INFO - thealliance.ai__blog__spotlight-on-supratick-mukhopadhyay.md: 14,596 chars (~3,649 tokens)
+2025-11-06 22:13:15,470 - INFO - thealliance.ai__blog__the-ai-alliance-comment-on-nist-ai-800-1-initial-public-draft.md: 6,202 chars (~1,550 tokens)
+2025-11-06 22:13:15,490 - INFO - thealliance.ai__blog__the-ai-alliance-forms-non-profit-ai-lab-and-ai-tec.md: 10,415 chars (~2,603 tokens)
+2025-11-06 22:13:15,510 - INFO - thealliance.ai__blog__the-ai-alliance-releases-new-ai-powered-programmin.md: 10,979 chars (~2,744 tokens)
+2025-11-06 22:13:15,531 - INFO - thealliance.ai__blog__the-state-of-open-source-trust.md: 25,800 chars (~6,450 tokens)
+2025-11-06 22:13:15,552 - INFO - thealliance.ai__blog__transform-pipelines-in-data-prep-kit.md: 18,789 chars (~4,697 tokens)
+2025-11-06 22:13:15,574 - INFO - thealliance.ai__community.md: 6,006 chars (~1,501 tokens)
+2025-11-06 22:13:15,592 - INFO - thealliance.ai__contact.md: 4,811 chars (~1,202 tokens)
+2025-11-06 22:13:15,612 - INFO - thealliance.ai__contribute.md: 7,091 chars (~1,772 tokens)
+2025-11-06 22:13:15,633 - INFO - thealliance.ai__core-projects.md: 11,191 chars (~2,797 tokens)
+2025-11-06 22:13:15,654 - INFO - thealliance.ai__core-projects__ai-accelerator-software-ecosystem-guide.md: 5,862 chars (~1,465 tokens)
+2025-11-06 22:13:15,674 - INFO - thealliance.ai__core-projects__guide-to-essential-competencies-for-ai.md: 7,034 chars (~1,758 tokens)
+2025-11-06 22:13:15,694 - INFO - thealliance.ai__core-projects__industry-open-fms-initiative.md: 5,888 chars (~1,472 tokens)
+2025-11-06 22:13:15,715 - INFO - thealliance.ai__core-projects__ntia_request.md: 5,194 chars (~1,298 tokens)
+2025-11-06 22:13:15,722 - INFO - thealliance.ai__core-projects__open-trusted-data-initiative.md: 6,114 chars (~1,528 tokens)
+2025-11-06 22:13:15,743 - INFO - thealliance.ai__core-projects__safety-priorities-ranking-by-domain.md: 5,711 chars (~1,427 tokens)
+2025-11-06 22:13:15,765 - INFO - thealliance.ai__core-projects__sb1047.md: 11,568 chars (~2,892 tokens)
+2025-11-06 22:13:15,787 - INFO - thealliance.ai__core-projects__the-living-guide-to-applying-ai.md: 5,995 chars (~1,498 tokens)
+2025-11-06 22:13:15,807 - INFO - thealliance.ai__core-projects__time-series-data-and-model-initiative.md: 6,377 chars (~1,594 tokens)
+2025-11-06 22:13:15,829 - INFO - thealliance.ai__core-projects__trust-and-safety-evaluations.md: 5,131 chars (~1,282 tokens)
+2025-11-06 22:13:15,852 - INFO - thealliance.ai__core-projects__trust-user-guide.md: 5,520 chars (~1,380 tokens)
+2025-11-06 22:13:15,873 - INFO - thealliance.ai__core-projects__trusted-evals.md: 9,290 chars (~2,322 tokens)
+2025-11-06 22:13:15,880 - INFO - thealliance.ai__docs__AI_Alliance_Association_Statement_in_Opposition_to_NY_RAISE_Act.md: 5,689 chars (~1,422 tokens)
+2025-11-06 22:13:15,905 - INFO - thealliance.ai__docs__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: 8,244 chars (~2,061 tokens)
+2025-11-06 22:13:15,937 - INFO - thealliance.ai__docs__guide-to-essential-competencies-for-ai.md: 112,385 chars (~28,096 tokens)
+2025-11-06 22:13:15,961 - INFO - thealliance.ai__events.md: 8,017 chars (~2,004 tokens)
+2025-11-06 22:13:15,980 - INFO - thealliance.ai__focus-areas__advocacy.md: 6,700 chars (~1,675 tokens)
+2025-11-06 22:13:15,999 - INFO - thealliance.ai__focus-areas__applications-and-tools.md: 5,424 chars (~1,356 tokens)
+2025-11-06 22:13:16,018 - INFO - thealliance.ai__focus-areas__foundation-models-datasets.md: 8,327 chars (~2,081 tokens)
+2025-11-06 22:13:16,037 - INFO - thealliance.ai__focus-areas__hardware-enablement.md: 5,197 chars (~1,299 tokens)
+2025-11-06 22:13:16,056 - INFO - thealliance.ai__focus-areas__skills-education.md: 4,841 chars (~1,210 tokens)
+2025-11-06 22:13:16,075 - INFO - thealliance.ai__focus-areas__trust-and-safety.md: 7,740 chars (~1,935 tokens)
+2025-11-06 22:13:16,095 - INFO - thealliance.ai__governance.md: 21,658 chars (~5,414 tokens)
+2025-11-06 22:13:16,116 - INFO - thealliance.ai__index.md: 25,770 chars (~6,442 tokens)
+2025-11-06 22:13:16,136 - INFO - thealliance.ai__leadership.md: 13,235 chars (~3,308 tokens)
+2025-11-06 22:13:16,142 - INFO - thealliance.ai__membership.md: 5,626 chars (~1,406 tokens)
+2025-11-06 22:13:16,162 - INFO - thealliance.ai__our-work.md: 14,032 chars (~3,508 tokens)
+2025-11-06 22:13:16,183 - INFO - thealliance.ai__working-groups__advocacy.md: 7,842 chars (~1,960 tokens)
+2025-11-06 22:13:16,207 - INFO - thealliance.ai__working-groups__ai-for-drug-discovery.md: 8,208 chars (~2,052 tokens)
+2025-11-06 22:13:16,226 - INFO - thealliance.ai__working-groups__applications-and-tools.md: 5,564 chars (~1,391 tokens)
+2025-11-06 22:13:16,246 - INFO - thealliance.ai__working-groups__climate-and-sustainability.md: 8,771 chars (~2,192 tokens)
+2025-11-06 22:13:16,266 - INFO - thealliance.ai__working-groups__foundation-models.md: 5,605 chars (~1,401 tokens)
+2025-11-06 22:13:16,286 - INFO - thealliance.ai__working-groups__hardware-enablement.md: 5,546 chars (~1,386 tokens)
+2025-11-06 22:13:16,309 - INFO - thealliance.ai__working-groups__materials-and-chemistry.md: 11,860 chars (~2,965 tokens)
+2025-11-06 22:13:16,329 - INFO - thealliance.ai__working-groups__skills--education.md: 5,939 chars (~1,484 tokens)
+2025-11-06 22:13:16,330 - INFO - 
+============================================================
+2025-11-06 22:13:16,330 - INFO - Total: 86 files | 1,010,687 chars | ~252,642 tokens
+2025-11-06 22:13:16,331 - INFO - Processing mode: INDIVIDUAL FILES (GraphRAG best practice)
+2025-11-06 22:13:16,331 - INFO - API calls: 86 (one per file)
+2025-11-06 22:13:16,332 - INFO - ============================================================
+
+2025-11-06 22:13:16,333 - INFO - 
+============================================================
+2025-11-06 22:13:16,333 - INFO - File 1/86: thealliance.ai__about-aia.md
+2025-11-06 22:13:16,334 - INFO - ============================================================
+2025-11-06 22:13:16,338 - INFO - thealliance.ai__about-aia.md: 8,694 chars (~2,173 tokens)
+2025-11-06 22:13:16,339 - INFO - thealliance.ai__about-aia.md: 2173 tokens within limit
+2025-11-06 22:13:48,470 - INFO - API #1: 2,870tok in | 979tok out | 32.1s
+2025-11-06 22:13:48,475 - INFO - thealliance.ai__about-aia.md: Extracted 8E + 3R
+2025-11-06 22:13:48,475 - INFO - thealliance.ai__about-aia.md: 8E + 3R
+2025-11-06 22:13:49,976 - INFO - 
+============================================================
+2025-11-06 22:13:49,977 - INFO - File 2/86: thealliance.ai__affiliated-projects.md
+2025-11-06 22:13:49,978 - INFO - ============================================================
+2025-11-06 22:13:49,983 - INFO - thealliance.ai__affiliated-projects.md: 6,965 chars (~1,741 tokens)
+2025-11-06 22:13:49,983 - INFO - thealliance.ai__affiliated-projects.md: 1741 tokens within limit
+2025-11-06 22:14:29,924 - INFO - API #2: 2,935tok in | 1,144tok out | 39.9s
+2025-11-06 22:14:29,925 - INFO - thealliance.ai__affiliated-projects.md: Extracted 10E + 6R
+2025-11-06 22:14:29,926 - INFO - thealliance.ai__affiliated-projects.md: 10E + 6R
+2025-11-06 22:14:31,426 - INFO - 
+============================================================
+2025-11-06 22:14:31,428 - INFO - File 3/86: thealliance.ai__affiliated-projects__bigcode.md
+2025-11-06 22:14:31,428 - INFO - ============================================================
+2025-11-06 22:14:31,433 - INFO - thealliance.ai__affiliated-projects__bigcode.md: 5,080 chars (~1,270 tokens)
+2025-11-06 22:14:31,434 - INFO - thealliance.ai__affiliated-projects__bigcode.md: 1270 tokens within limit
+2025-11-06 22:15:12,553 - INFO - API #3: 2,315tok in | 1,104tok out | 41.1s
+2025-11-06 22:15:12,554 - INFO - thealliance.ai__affiliated-projects__bigcode.md: Extracted 9E + 6R
+2025-11-06 22:15:12,555 - INFO - thealliance.ai__affiliated-projects__bigcode.md: 9E + 6R
+2025-11-06 22:15:14,056 - INFO - 
+============================================================
+2025-11-06 22:15:14,057 - INFO - File 4/86: thealliance.ai__affiliated-projects__cornell_generative.md
+2025-11-06 22:15:14,058 - INFO - ============================================================
+2025-11-06 22:15:14,065 - INFO - thealliance.ai__affiliated-projects__cornell_generative.md: 4,663 chars (~1,165 tokens)
+2025-11-06 22:15:14,066 - INFO - thealliance.ai__affiliated-projects__cornell_generative.md: 1165 tokens within limit
+2025-11-06 22:16:07,268 - INFO - API #4: 2,223tok in | 1,426tok out | 53.2s
+2025-11-06 22:16:07,269 - INFO - thealliance.ai__affiliated-projects__cornell_generative.md: Extracted 10E + 7R
+2025-11-06 22:16:07,271 - INFO - thealliance.ai__affiliated-projects__cornell_generative.md: 10E + 7R
+2025-11-06 22:16:08,772 - INFO - 
+============================================================
+2025-11-06 22:16:08,773 - INFO - File 5/86: thealliance.ai__affiliated-projects__ibm_granite.md
+2025-11-06 22:16:08,774 - INFO - ============================================================
+2025-11-06 22:16:08,778 - INFO - thealliance.ai__affiliated-projects__ibm_granite.md: 5,686 chars (~1,421 tokens)
+2025-11-06 22:16:08,779 - INFO - thealliance.ai__affiliated-projects__ibm_granite.md: 1421 tokens within limit
+2025-11-06 22:16:31,109 - INFO - API #5: 2,433tok in | 854tok out | 22.3s
+2025-11-06 22:16:31,110 - INFO - thealliance.ai__affiliated-projects__ibm_granite.md: Extracted 7E + 5R
+2025-11-06 22:16:31,111 - INFO - thealliance.ai__affiliated-projects__ibm_granite.md: 7E + 5R
+2025-11-06 22:16:35,550 - INFO - 
+============================================================
+2025-11-06 22:16:35,551 - INFO - File 6/86: thealliance.ai__affiliated-projects__mbzuai_llm.md
+2025-11-06 22:16:35,552 - INFO - ============================================================
+2025-11-06 22:16:35,557 - INFO - thealliance.ai__affiliated-projects__mbzuai_llm.md: 5,032 chars (~1,258 tokens)
+2025-11-06 22:16:35,558 - INFO - thealliance.ai__affiliated-projects__mbzuai_llm.md: 1258 tokens within limit
+2025-11-06 22:17:16,878 - INFO - API #6: 2,326tok in | 850tok out | 41.3s
+2025-11-06 22:17:16,880 - INFO - thealliance.ai__affiliated-projects__mbzuai_llm.md: Extracted 7E + 3R
+2025-11-06 22:17:16,881 - INFO - thealliance.ai__affiliated-projects__mbzuai_llm.md: 7E + 3R
+2025-11-06 22:17:18,382 - INFO - 
+============================================================
+2025-11-06 22:17:18,383 - INFO - File 7/86: thealliance.ai__affiliated-projects__quansight_ragna.md
+2025-11-06 22:17:18,384 - INFO - ============================================================
+2025-11-06 22:17:18,391 - INFO - thealliance.ai__affiliated-projects__quansight_ragna.md: 6,436 chars (~1,609 tokens)
+2025-11-06 22:17:18,392 - INFO - thealliance.ai__affiliated-projects__quansight_ragna.md: 1609 tokens within limit
+2025-11-06 22:17:36,454 - INFO - API #7: 2,542tok in | 728tok out | 18.1s
+2025-11-06 22:17:36,455 - INFO - thealliance.ai__affiliated-projects__quansight_ragna.md: Extracted 6E + 3R
+2025-11-06 22:17:36,456 - INFO - thealliance.ai__affiliated-projects__quansight_ragna.md: 6E + 3R
+2025-11-06 22:17:37,957 - INFO - 
+============================================================
+2025-11-06 22:17:37,958 - INFO - File 8/86: thealliance.ai__affiliated-projects__trusty_ai.md
+2025-11-06 22:17:37,959 - INFO - ============================================================
+2025-11-06 22:17:37,965 - INFO - thealliance.ai__affiliated-projects__trusty_ai.md: 4,973 chars (~1,243 tokens)
+2025-11-06 22:17:37,965 - INFO - thealliance.ai__affiliated-projects__trusty_ai.md: 1243 tokens within limit
+2025-11-06 22:18:14,751 - INFO - API #8: 2,299tok in | 1,206tok out | 36.8s
+2025-11-06 22:18:14,752 - INFO - thealliance.ai__affiliated-projects__trusty_ai.md: Extracted 10E + 7R
+2025-11-06 22:18:14,753 - INFO - thealliance.ai__affiliated-projects__trusty_ai.md: 10E + 7R
+2025-11-06 22:18:16,254 - INFO - 
+============================================================
+2025-11-06 22:18:16,255 - INFO - File 9/86: thealliance.ai__ai-alliance-open-innovation-principles.md
+2025-11-06 22:18:16,256 - INFO - ============================================================
+2025-11-06 22:18:16,261 - INFO - thealliance.ai__ai-alliance-open-innovation-principles.md: 8,476 chars (~2,119 tokens)
+2025-11-06 22:18:16,262 - INFO - thealliance.ai__ai-alliance-open-innovation-principles.md: 2119 tokens within limit
+2025-11-06 22:18:49,917 - INFO - API #9: 2,875tok in | 1,223tok out | 33.7s
+2025-11-06 22:18:49,918 - INFO - thealliance.ai__ai-alliance-open-innovation-principles.md: Extracted 10E + 7R
+2025-11-06 22:18:49,919 - INFO - thealliance.ai__ai-alliance-open-innovation-principles.md: 10E + 7R
+2025-11-06 22:18:51,420 - INFO - 
+============================================================
+2025-11-06 22:18:51,421 - INFO - File 10/86: thealliance.ai__aia-members.md
+2025-11-06 22:18:51,422 - INFO - ============================================================
+2025-11-06 22:18:51,429 - INFO - thealliance.ai__aia-members.md: 25,788 chars (~6,447 tokens)
+2025-11-06 22:18:51,429 - INFO - thealliance.ai__aia-members.md: 6447 tokens within limit
+2025-11-06 22:19:41,785 - INFO - API #10: 9,877tok in | 1,727tok out | 50.4s
+2025-11-06 22:19:41,786 - INFO - thealliance.ai__aia-members.md: Extracted 16E + 7R
+2025-11-06 22:19:41,787 - INFO - thealliance.ai__aia-members.md: 16E + 7R
+2025-11-06 22:19:43,288 - INFO - 
+============================================================
+2025-11-06 22:19:43,289 - INFO - File 11/86: thealliance.ai__become-a-collaborator.md
+2025-11-06 22:19:43,290 - INFO - ============================================================
+2025-11-06 22:19:43,295 - INFO - thealliance.ai__become-a-collaborator.md: 5,636 chars (~1,409 tokens)
+2025-11-06 22:19:43,296 - INFO - thealliance.ai__become-a-collaborator.md: 1409 tokens within limit
+2025-11-06 22:20:15,105 - INFO - API #11: 2,373tok in | 1,155tok out | 31.8s
+2025-11-06 22:20:15,106 - INFO - thealliance.ai__become-a-collaborator.md: Extracted 10E + 6R
+2025-11-06 22:20:15,107 - INFO - thealliance.ai__become-a-collaborator.md: 10E + 6R
+2025-11-06 22:20:16,608 - INFO - 
+============================================================
+2025-11-06 22:20:16,609 - INFO - File 12/86: thealliance.ai__blog.md
+2025-11-06 22:20:16,610 - INFO - ============================================================
+2025-11-06 22:20:16,622 - INFO - thealliance.ai__blog.md: 11,364 chars (~2,841 tokens)
+2025-11-06 22:20:16,623 - INFO - thealliance.ai__blog.md: 2841 tokens within limit
+2025-11-06 22:20:52,103 - INFO - API #12: 3,927tok in | 1,339tok out | 35.5s
+2025-11-06 22:20:52,104 - INFO - thealliance.ai__blog.md: Extracted 10E + 7R
+2025-11-06 22:20:52,105 - INFO - thealliance.ai__blog.md: 10E + 7R
+2025-11-06 22:20:53,607 - INFO - 
+============================================================
+2025-11-06 22:20:53,608 - INFO - File 13/86: thealliance.ai__blog__advancing-domain-specific-qa-the-ai-alliances-guide.md
+2025-11-06 22:20:53,609 - INFO - ============================================================
+2025-11-06 22:20:53,616 - INFO - thealliance.ai__blog__advancing-domain-specific-qa-the-ai-alliances-guide.md: 13,430 chars (~3,357 tokens)
+2025-11-06 22:20:53,616 - INFO - thealliance.ai__blog__advancing-domain-specific-qa-the-ai-alliances-guide.md: 3357 tokens within limit
+2025-11-06 22:21:29,368 - INFO - API #13: 4,233tok in | 1,284tok out | 35.8s
+2025-11-06 22:21:29,369 - INFO - thealliance.ai__blog__advancing-domain-specific-qa-the-ai-alliances-guide.md: Extracted 9E + 7R
+2025-11-06 22:21:29,371 - INFO - thealliance.ai__blog__advancing-domain-specific-qa-the-ai-alliances-guide.md: 9E + 7R
+2025-11-06 22:21:30,872 - INFO - 
+============================================================
+2025-11-06 22:21:30,873 - INFO - File 14/86: thealliance.ai__blog__ai-alliance-accelerating-open-source-ai-innovation.md
+2025-11-06 22:21:30,874 - INFO - ============================================================
+2025-11-06 22:21:30,881 - INFO - thealliance.ai__blog__ai-alliance-accelerating-open-source-ai-innovation.md: 11,458 chars (~2,864 tokens)
+2025-11-06 22:21:30,882 - INFO - thealliance.ai__blog__ai-alliance-accelerating-open-source-ai-innovation.md: 2864 tokens within limit
+2025-11-06 22:22:02,951 - INFO - API #14: 3,844tok in | 1,165tok out | 32.1s
+2025-11-06 22:22:02,952 - INFO - thealliance.ai__blog__ai-alliance-accelerating-open-source-ai-innovation.md: Extracted 11E + 6R
+2025-11-06 22:22:02,954 - INFO - thealliance.ai__blog__ai-alliance-accelerating-open-source-ai-innovation.md: 11E + 6R
+2025-11-06 22:22:04,455 - INFO - 
+============================================================
+2025-11-06 22:22:04,456 - INFO - File 15/86: thealliance.ai__blog__ai-alliance-comment-in-response-to-japan-fair-trade-commission-discussion-paper-on-generative-ai-and-competition.md
+2025-11-06 22:22:04,457 - INFO - ============================================================
+2025-11-06 22:22:04,462 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-japan-fair-trade-commission-discussion-paper-on-generative-ai-and-competition.md: 6,002 chars (~1,500 tokens)
+2025-11-06 22:22:04,463 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-japan-fair-trade-commission-discussion-paper-on-generative-ai-and-competition.md: 1500 tokens within limit
+2025-11-06 22:22:22,700 - INFO - API #15: 2,676tok in | 740tok out | 18.2s
+2025-11-06 22:22:22,701 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-japan-fair-trade-commission-discussion-paper-on-generative-ai-and-competition.md: Extracted 7E + 3R
+2025-11-06 22:22:22,702 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-japan-fair-trade-commission-discussion-paper-on-generative-ai-and-competition.md: 7E + 3R
+2025-11-06 22:22:27,143 - INFO - 
+============================================================
+2025-11-06 22:22:27,144 - INFO - File 16/86: thealliance.ai__blog__ai-alliance-comment-in-response-to-the-rfi-on-the-development-of-an-ai-action-plan.md
+2025-11-06 22:22:27,145 - INFO - ============================================================
+2025-11-06 22:22:27,151 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-the-rfi-on-the-development-of-an-ai-action-plan.md: 6,092 chars (~1,523 tokens)
+2025-11-06 22:22:27,151 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-the-rfi-on-the-development-of-an-ai-action-plan.md: 1523 tokens within limit
+2025-11-06 22:22:45,991 - INFO - API #16: 2,696tok in | 737tok out | 18.8s
+2025-11-06 22:22:45,992 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-the-rfi-on-the-development-of-an-ai-action-plan.md: Extracted 6E + 3R
+2025-11-06 22:22:45,993 - INFO - thealliance.ai__blog__ai-alliance-comment-in-response-to-the-rfi-on-the-development-of-an-ai-action-plan.md: 6E + 3R
+2025-11-06 22:22:47,494 - INFO - 
+============================================================
+2025-11-06 22:22:47,495 - INFO - File 17/86: thealliance.ai__blog__ai-alliance-expands-with-seven-new-members-from-in.md
+2025-11-06 22:22:47,496 - INFO - ============================================================
+2025-11-06 22:22:47,502 - INFO - thealliance.ai__blog__ai-alliance-expands-with-seven-new-members-from-in.md: 14,959 chars (~3,739 tokens)
+2025-11-06 22:22:47,502 - INFO - thealliance.ai__blog__ai-alliance-expands-with-seven-new-members-from-in.md: 3739 tokens within limit
+2025-11-06 22:23:16,242 - INFO - API #17: 4,493tok in | 985tok out | 28.7s
+2025-11-06 22:23:16,243 - INFO - thealliance.ai__blog__ai-alliance-expands-with-seven-new-members-from-in.md: Extracted 10E + 3R
+2025-11-06 22:23:16,245 - INFO - thealliance.ai__blog__ai-alliance-expands-with-seven-new-members-from-in.md: 10E + 3R
+2025-11-06 22:23:17,746 - INFO - 
+============================================================
+2025-11-06 22:23:17,748 - INFO - File 18/86: thealliance.ai__blog__ai-alliance-skills-and-education-working-group-intro.md
+2025-11-06 22:23:17,748 - INFO - ============================================================
+2025-11-06 22:23:17,758 - INFO - thealliance.ai__blog__ai-alliance-skills-and-education-working-group-intro.md: 11,634 chars (~2,908 tokens)
+2025-11-06 22:23:17,758 - INFO - thealliance.ai__blog__ai-alliance-skills-and-education-working-group-intro.md: 2908 tokens within limit
+2025-11-06 22:23:54,786 - INFO - API #18: 3,831tok in | 1,352tok out | 37.0s
+2025-11-06 22:23:54,788 - INFO - thealliance.ai__blog__ai-alliance-skills-and-education-working-group-intro.md: Extracted 10E + 7R
+2025-11-06 22:23:54,789 - INFO - thealliance.ai__blog__ai-alliance-skills-and-education-working-group-intro.md: 10E + 7R
+2025-11-06 22:23:56,290 - INFO - 
+============================================================
+2025-11-06 22:23:56,291 - INFO - File 19/86: thealliance.ai__blog__ai-alliance-urges-lawmakers-to-rethink-the-ny-raise-act.md
+2025-11-06 22:23:56,292 - INFO - ============================================================
+2025-11-06 22:23:56,299 - INFO - thealliance.ai__blog__ai-alliance-urges-lawmakers-to-rethink-the-ny-raise-act.md: 7,627 chars (~1,906 tokens)
+2025-11-06 22:23:56,299 - INFO - thealliance.ai__blog__ai-alliance-urges-lawmakers-to-rethink-the-ny-raise-act.md: 1906 tokens within limit
+2025-11-06 22:24:18,004 - INFO - API #19: 3,121tok in | 699tok out | 21.7s
+2025-11-06 22:24:18,005 - INFO - thealliance.ai__blog__ai-alliance-urges-lawmakers-to-rethink-the-ny-raise-act.md: Extracted 6E + 3R
+2025-11-06 22:24:18,006 - INFO - thealliance.ai__blog__ai-alliance-urges-lawmakers-to-rethink-the-ny-raise-act.md: 6E + 3R
+2025-11-06 22:24:19,507 - INFO - 
+============================================================
+2025-11-06 22:24:19,508 - INFO - File 20/86: thealliance.ai__blog__ai-for-drug-discovery-open-innovation-forum.md
+2025-11-06 22:24:19,509 - INFO - ============================================================
+2025-11-06 22:24:19,516 - INFO - thealliance.ai__blog__ai-for-drug-discovery-open-innovation-forum.md: 7,953 chars (~1,988 tokens)
+2025-11-06 22:24:19,517 - INFO - thealliance.ai__blog__ai-for-drug-discovery-open-innovation-forum.md: 1988 tokens within limit
+2025-11-06 22:25:04,864 - INFO - API #20: 3,104tok in | 1,779tok out | 45.3s
+2025-11-06 22:25:04,866 - INFO - thealliance.ai__blog__ai-for-drug-discovery-open-innovation-forum.md: Extracted 10E + 7R
+2025-11-06 22:25:04,868 - INFO - thealliance.ai__blog__ai-for-drug-discovery-open-innovation-forum.md: 10E + 7R
+2025-11-06 22:25:06,369 - INFO - 
+============================================================
+2025-11-06 22:25:06,370 - INFO - File 21/86: thealliance.ai__blog__alliance_launch.md
+2025-11-06 22:25:06,371 - INFO - ============================================================
+2025-11-06 22:25:06,384 - INFO - thealliance.ai__blog__alliance_launch.md: 38,704 chars (~9,676 tokens)
+2025-11-06 22:25:06,385 - INFO - thealliance.ai__blog__alliance_launch.md: 9676 tokens within limit
+2025-11-06 22:25:38,842 - INFO - API #21: 9,560tok in | 1,085tok out | 32.5s
+2025-11-06 22:25:38,843 - INFO - thealliance.ai__blog__alliance_launch.md: Extracted 9E + 7R
+2025-11-06 22:25:38,844 - INFO - thealliance.ai__blog__alliance_launch.md: 9E + 7R
+2025-11-06 22:25:40,345 - INFO - 
+============================================================
+2025-11-06 22:25:40,346 - INFO - File 22/86: thealliance.ai__blog__architecture-of-data-prep-kit-framework.md
+2025-11-06 22:25:40,347 - INFO - ============================================================
+2025-11-06 22:25:40,353 - INFO - thealliance.ai__blog__architecture-of-data-prep-kit-framework.md: 34,083 chars (~8,520 tokens)
+2025-11-06 22:25:40,353 - INFO - thealliance.ai__blog__architecture-of-data-prep-kit-framework.md: 8520 tokens within limit
+2025-11-06 22:26:19,671 - INFO - API #22: 8,386tok in | 1,102tok out | 39.3s
+2025-11-06 22:26:19,672 - INFO - thealliance.ai__blog__architecture-of-data-prep-kit-framework.md: Extracted 10E + 6R
+2025-11-06 22:26:19,674 - INFO - thealliance.ai__blog__architecture-of-data-prep-kit-framework.md: 10E + 6R
+2025-11-06 22:26:21,176 - INFO - 
+============================================================
+2025-11-06 22:26:21,177 - INFO - File 23/86: thealliance.ai__blog__defining-open-source-ai-the-road-ahead.md
+2025-11-06 22:26:21,178 - INFO - ============================================================
+2025-11-06 22:26:21,185 - INFO - thealliance.ai__blog__defining-open-source-ai-the-road-ahead.md: 14,084 chars (~3,521 tokens)
+2025-11-06 22:26:21,188 - INFO - thealliance.ai__blog__defining-open-source-ai-the-road-ahead.md: 3521 tokens within limit
+2025-11-06 22:27:11,136 - INFO - API #23: 4,299tok in | 1,445tok out | 49.9s
+2025-11-06 22:27:11,143 - INFO - thealliance.ai__blog__defining-open-source-ai-the-road-ahead.md: Extracted 10E + 7R
+2025-11-06 22:27:11,147 - INFO - thealliance.ai__blog__defining-open-source-ai-the-road-ahead.md: 10E + 7R
+2025-11-06 22:27:12,649 - INFO - 
+============================================================
+2025-11-06 22:27:12,651 - INFO - File 24/86: thealliance.ai__blog__dept-commerce-ntia-report-on-open-weights-models.md
+2025-11-06 22:27:12,652 - INFO - ============================================================
+2025-11-06 22:27:12,669 - INFO - thealliance.ai__blog__dept-commerce-ntia-report-on-open-weights-models.md: 9,618 chars (~2,404 tokens)
+2025-11-06 22:27:12,670 - INFO - thealliance.ai__blog__dept-commerce-ntia-report-on-open-weights-models.md: 2404 tokens within limit
+2025-11-06 22:27:47,775 - INFO - API #24: 3,531tok in | 837tok out | 35.1s
+2025-11-06 22:27:47,783 - INFO - thealliance.ai__blog__dept-commerce-ntia-report-on-open-weights-models.md: Extracted 8E + 3R
+2025-11-06 22:27:47,785 - INFO - thealliance.ai__blog__dept-commerce-ntia-report-on-open-weights-models.md: 8E + 3R
+2025-11-06 22:27:49,286 - INFO - 
+============================================================
+2025-11-06 22:27:49,287 - INFO - File 25/86: thealliance.ai__blog__doomarena-a-security-testing-framework-for-ai-agen.md
+2025-11-06 22:27:49,288 - INFO - ============================================================
+2025-11-06 22:27:49,298 - INFO - thealliance.ai__blog__doomarena-a-security-testing-framework-for-ai-agen.md: 16,083 chars (~4,020 tokens)
+2025-11-06 22:27:49,299 - INFO - thealliance.ai__blog__doomarena-a-security-testing-framework-for-ai-agen.md: 4020 tokens within limit
+2025-11-06 22:28:38,798 - INFO - API #25: 4,667tok in | 1,160tok out | 49.5s
+2025-11-06 22:28:38,800 - INFO - thealliance.ai__blog__doomarena-a-security-testing-framework-for-ai-agen.md: Extracted 8E + 6R
+2025-11-06 22:28:38,802 - INFO - thealliance.ai__blog__doomarena-a-security-testing-framework-for-ai-agen.md: 8E + 6R
+2025-11-06 22:28:40,303 - INFO - 
+============================================================
+2025-11-06 22:28:40,305 - INFO - File 26/86: thealliance.ai__blog__evaluation-of-generative-ai---whats-ultimately-our.md
+2025-11-06 22:28:40,305 - INFO - ============================================================
+2025-11-06 22:28:40,314 - INFO - thealliance.ai__blog__evaluation-of-generative-ai---whats-ultimately-our.md: 22,386 chars (~5,596 tokens)
+2025-11-06 22:28:40,314 - INFO - thealliance.ai__blog__evaluation-of-generative-ai---whats-ultimately-our.md: 5596 tokens within limit
+2025-11-06 22:29:31,122 - INFO - API #26: 6,787tok in | 1,331tok out | 50.8s
+2025-11-06 22:29:31,123 - INFO - thealliance.ai__blog__evaluation-of-generative-ai---whats-ultimately-our.md: Extracted 11E + 7R
+2025-11-06 22:29:31,125 - INFO - thealliance.ai__blog__evaluation-of-generative-ai---whats-ultimately-our.md: 11E + 7R
+2025-11-06 22:29:32,626 - INFO - 
+============================================================
+2025-11-06 22:29:32,628 - INFO - File 27/86: thealliance.ai__blog__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md
+2025-11-06 22:29:32,629 - INFO - ============================================================
+2025-11-06 22:29:32,639 - INFO - thealliance.ai__blog__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: 5,942 chars (~1,485 tokens)
+2025-11-06 22:29:32,640 - INFO - thealliance.ai__blog__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: 1485 tokens within limit
+2025-11-06 22:29:57,666 - INFO - API #27: 2,673tok in | 810tok out | 25.0s
+2025-11-06 22:29:57,674 - INFO - thealliance.ai__blog__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: Extracted 7E + 3R
+2025-11-06 22:29:57,682 - INFO - thealliance.ai__blog__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: 7E + 3R
+2025-11-06 22:29:59,185 - INFO - 
+============================================================
+2025-11-06 22:29:59,187 - INFO - File 28/86: thealliance.ai__blog__from-layout-to-logic-how-docling-is-redefining-doc.md
+2025-11-06 22:29:59,188 - INFO - ============================================================
+2025-11-06 22:29:59,203 - INFO - thealliance.ai__blog__from-layout-to-logic-how-docling-is-redefining-doc.md: 14,549 chars (~3,637 tokens)
+2025-11-06 22:29:59,206 - INFO - thealliance.ai__blog__from-layout-to-logic-how-docling-is-redefining-doc.md: 3637 tokens within limit
+2025-11-06 22:30:43,850 - INFO - API #28: 4,776tok in | 1,186tok out | 44.6s
+2025-11-06 22:30:43,853 - INFO - thealliance.ai__blog__from-layout-to-logic-how-docling-is-redefining-doc.md: Extracted 10E + 7R
+2025-11-06 22:30:43,855 - INFO - thealliance.ai__blog__from-layout-to-logic-how-docling-is-redefining-doc.md: 10E + 7R
+2025-11-06 22:30:45,356 - INFO - 
+============================================================
+2025-11-06 22:30:45,358 - INFO - File 29/86: thealliance.ai__blog__getting-started-with-ai-trust-and-safety.md
+2025-11-06 22:30:45,359 - INFO - ============================================================
+2025-11-06 22:30:45,367 - INFO - thealliance.ai__blog__getting-started-with-ai-trust-and-safety.md: 9,977 chars (~2,494 tokens)
+2025-11-06 22:30:45,367 - INFO - thealliance.ai__blog__getting-started-with-ai-trust-and-safety.md: 2494 tokens within limit
+2025-11-06 22:31:22,294 - INFO - API #29: 3,538tok in | 1,169tok out | 36.9s
+2025-11-06 22:31:22,298 - INFO - thealliance.ai__blog__getting-started-with-ai-trust-and-safety.md: Extracted 10E + 6R
+2025-11-06 22:31:22,300 - INFO - thealliance.ai__blog__getting-started-with-ai-trust-and-safety.md: 10E + 6R
+2025-11-06 22:31:23,802 - INFO - 
+============================================================
+2025-11-06 22:31:23,803 - INFO - File 30/86: thealliance.ai__blog__ictp-announces-ai-prize-for-science-an-ai-alliance.md
+2025-11-06 22:31:23,804 - INFO - ============================================================
+2025-11-06 22:31:23,814 - INFO - thealliance.ai__blog__ictp-announces-ai-prize-for-science-an-ai-alliance.md: 12,510 chars (~3,127 tokens)
+2025-11-06 22:31:23,815 - INFO - thealliance.ai__blog__ictp-announces-ai-prize-for-science-an-ai-alliance.md: 3127 tokens within limit
+2025-11-06 22:31:59,837 - INFO - API #30: 4,030tok in | 1,079tok out | 36.0s
+2025-11-06 22:31:59,838 - INFO - thealliance.ai__blog__ictp-announces-ai-prize-for-science-an-ai-alliance.md: Extracted 8E + 6R
+2025-11-06 22:31:59,839 - INFO - thealliance.ai__blog__ictp-announces-ai-prize-for-science-an-ai-alliance.md: 8E + 6R
+2025-11-06 22:32:01,340 - INFO - 
+============================================================
+2025-11-06 22:32:01,342 - INFO - File 31/86: thealliance.ai__blog__introducing-the-ai-alliance-open-innovation-principles.md
+2025-11-06 22:32:01,343 - INFO - ============================================================
+2025-11-06 22:32:01,351 - INFO - thealliance.ai__blog__introducing-the-ai-alliance-open-innovation-principles.md: 7,601 chars (~1,900 tokens)
+2025-11-06 22:32:01,351 - INFO - thealliance.ai__blog__introducing-the-ai-alliance-open-innovation-principles.md: 1900 tokens within limit
+2025-11-06 22:32:39,063 - INFO - API #31: 3,087tok in | 1,323tok out | 37.7s
+2025-11-06 22:32:39,066 - INFO - thealliance.ai__blog__introducing-the-ai-alliance-open-innovation-principles.md: Extracted 8E + 8R
+2025-11-06 22:32:39,068 - INFO - thealliance.ai__blog__introducing-the-ai-alliance-open-innovation-principles.md: 8E + 8R
+2025-11-06 22:32:40,570 - INFO - 
+============================================================
+2025-11-06 22:32:40,572 - INFO - File 32/86: thealliance.ai__blog__llm-as-a-judge-without-the-headaches-evalassist-br.md
+2025-11-06 22:32:40,572 - INFO - ============================================================
+2025-11-06 22:32:40,580 - INFO - thealliance.ai__blog__llm-as-a-judge-without-the-headaches-evalassist-br.md: 12,360 chars (~3,090 tokens)
+2025-11-06 22:32:40,581 - INFO - thealliance.ai__blog__llm-as-a-judge-without-the-headaches-evalassist-br.md: 3090 tokens within limit
+2025-11-06 22:33:08,118 - INFO - API #32: 4,113tok in | 914tok out | 27.5s
+2025-11-06 22:33:08,120 - INFO - thealliance.ai__blog__llm-as-a-judge-without-the-headaches-evalassist-br.md: Extracted 9E + 3R
+2025-11-06 22:33:08,122 - INFO - thealliance.ai__blog__llm-as-a-judge-without-the-headaches-evalassist-br.md: 9E + 3R
+2025-11-06 22:33:09,623 - INFO - 
+============================================================
+2025-11-06 22:33:09,624 - INFO - File 33/86: thealliance.ai__blog__mastering-data-cleaning-for-fine-tuning-llms-and-r.md
+2025-11-06 22:33:09,626 - INFO - ============================================================
+2025-11-06 22:33:09,639 - INFO - thealliance.ai__blog__mastering-data-cleaning-for-fine-tuning-llms-and-r.md: 18,117 chars (~4,529 tokens)
+2025-11-06 22:33:09,640 - INFO - thealliance.ai__blog__mastering-data-cleaning-for-fine-tuning-llms-and-r.md: 4529 tokens within limit
+2025-11-06 22:33:46,844 - INFO - API #33: 5,502tok in | 1,256tok out | 37.2s
+2025-11-06 22:33:46,857 - INFO - thealliance.ai__blog__mastering-data-cleaning-for-fine-tuning-llms-and-r.md: Extracted 10E + 7R
+2025-11-06 22:33:46,867 - INFO - thealliance.ai__blog__mastering-data-cleaning-for-fine-tuning-llms-and-r.md: 10E + 7R
+2025-11-06 22:33:48,373 - INFO - 
+============================================================
+2025-11-06 22:33:48,378 - INFO - File 34/86: thealliance.ai__blog__navigating-the-ai-risk-labyrinth.md
+2025-11-06 22:33:48,379 - INFO - ============================================================
+2025-11-06 22:33:48,406 - INFO - thealliance.ai__blog__navigating-the-ai-risk-labyrinth.md: 12,996 chars (~3,249 tokens)
+2025-11-06 22:33:48,408 - INFO - thealliance.ai__blog__navigating-the-ai-risk-labyrinth.md: 3249 tokens within limit
+2025-11-06 22:34:25,343 - INFO - API #34: 4,161tok in | 1,209tok out | 36.9s
+2025-11-06 22:34:25,345 - INFO - thealliance.ai__blog__navigating-the-ai-risk-labyrinth.md: Extracted 10E + 7R
+2025-11-06 22:34:25,346 - INFO - thealliance.ai__blog__navigating-the-ai-risk-labyrinth.md: 10E + 7R
+2025-11-06 22:34:26,848 - INFO - 
+============================================================
+2025-11-06 22:34:26,849 - INFO - File 35/86: thealliance.ai__blog__open-source-ai-demo-night-sf-2024.md
+2025-11-06 22:34:26,850 - INFO - ============================================================
+2025-11-06 22:34:26,861 - INFO - thealliance.ai__blog__open-source-ai-demo-night-sf-2024.md: 10,266 chars (~2,566 tokens)
+2025-11-06 22:34:26,862 - INFO - thealliance.ai__blog__open-source-ai-demo-night-sf-2024.md: 2566 tokens within limit
+2025-11-06 22:35:13,965 - INFO - API #35: 3,744tok in | 1,267tok out | 47.1s
+2025-11-06 22:35:13,979 - INFO - thealliance.ai__blog__open-source-ai-demo-night-sf-2024.md: Extracted 10E + 6R
+2025-11-06 22:35:13,992 - INFO - thealliance.ai__blog__open-source-ai-demo-night-sf-2024.md: 10E + 6R
+2025-11-06 22:35:15,497 - INFO - 
+============================================================
+2025-11-06 22:35:15,500 - INFO - File 36/86: thealliance.ai__blog__open-trusted-wikimedia-datasets-by-wikimedia-enter.md
+2025-11-06 22:35:15,501 - INFO - ============================================================
+2025-11-06 22:35:15,518 - INFO - thealliance.ai__blog__open-trusted-wikimedia-datasets-by-wikimedia-enter.md: 11,498 chars (~2,874 tokens)
+2025-11-06 22:35:15,519 - INFO - thealliance.ai__blog__open-trusted-wikimedia-datasets-by-wikimedia-enter.md: 2874 tokens within limit
+2025-11-06 22:35:48,317 - INFO - API #36: 3,775tok in | 1,081tok out | 32.8s
+2025-11-06 22:35:48,323 - INFO - thealliance.ai__blog__open-trusted-wikimedia-datasets-by-wikimedia-enter.md: Extracted 9E + 6R
+2025-11-06 22:35:48,335 - INFO - thealliance.ai__blog__open-trusted-wikimedia-datasets-by-wikimedia-enter.md: 9E + 6R
+2025-11-06 22:35:49,848 - INFO - 
+============================================================
+2025-11-06 22:35:49,851 - INFO - File 37/86: thealliance.ai__blog__our-first-year.md
+2025-11-06 22:35:49,852 - INFO - ============================================================
+2025-11-06 22:35:49,872 - INFO - thealliance.ai__blog__our-first-year.md: 27,868 chars (~6,967 tokens)
+2025-11-06 22:35:49,874 - INFO - thealliance.ai__blog__our-first-year.md: 6967 tokens within limit
+2025-11-06 22:36:24,932 - INFO - API #37: 7,190tok in | 1,228tok out | 35.1s
+2025-11-06 22:36:24,934 - INFO - thealliance.ai__blog__our-first-year.md: Extracted 10E + 7R
+2025-11-06 22:36:24,940 - INFO - thealliance.ai__blog__our-first-year.md: 10E + 7R
+2025-11-06 22:36:26,441 - INFO - 
+============================================================
+2025-11-06 22:36:26,443 - INFO - File 38/86: thealliance.ai__blog__pleias-releases-common-corpus-open-multilingual-dataset-for-llm-training.md
+2025-11-06 22:36:26,444 - INFO - ============================================================
+2025-11-06 22:36:26,461 - INFO - thealliance.ai__blog__pleias-releases-common-corpus-open-multilingual-dataset-for-llm-training.md: 18,477 chars (~4,619 tokens)
+2025-11-06 22:36:26,462 - INFO - thealliance.ai__blog__pleias-releases-common-corpus-open-multilingual-dataset-for-llm-training.md: 4619 tokens within limit
+2025-11-06 22:37:08,890 - INFO - API #38: 5,416tok in | 1,355tok out | 42.4s
+2025-11-06 22:37:08,892 - INFO - thealliance.ai__blog__pleias-releases-common-corpus-open-multilingual-dataset-for-llm-training.md: Extracted 10E + 7R
+2025-11-06 22:37:08,894 - INFO - thealliance.ai__blog__pleias-releases-common-corpus-open-multilingual-dataset-for-llm-training.md: 10E + 7R
+2025-11-06 22:37:10,395 - INFO - 
+============================================================
+2025-11-06 22:37:10,397 - INFO - File 39/86: thealliance.ai__blog__public-statement-on-possible-veto-of-sb-1047.md
+2025-11-06 22:37:10,397 - INFO - ============================================================
+2025-11-06 22:37:10,412 - INFO - thealliance.ai__blog__public-statement-on-possible-veto-of-sb-1047.md: 8,423 chars (~2,105 tokens)
+2025-11-06 22:37:10,414 - INFO - thealliance.ai__blog__public-statement-on-possible-veto-of-sb-1047.md: 2105 tokens within limit
+2025-11-06 22:37:33,899 - INFO - API #39: 3,343tok in | 803tok out | 23.5s
+2025-11-06 22:37:33,900 - INFO - thealliance.ai__blog__public-statement-on-possible-veto-of-sb-1047.md: Extracted 7E + 3R
+2025-11-06 22:37:33,901 - INFO - thealliance.ai__blog__public-statement-on-possible-veto-of-sb-1047.md: 7E + 3R
+2025-11-06 22:37:35,402 - INFO - 
+============================================================
+2025-11-06 22:37:35,406 - INFO - File 40/86: thealliance.ai__blog__spotlight-on-raphael-vienne.md
+2025-11-06 22:37:35,408 - INFO - ============================================================
+2025-11-06 22:37:35,418 - INFO - thealliance.ai__blog__spotlight-on-raphael-vienne.md: 8,988 chars (~2,247 tokens)
+2025-11-06 22:37:35,419 - INFO - thealliance.ai__blog__spotlight-on-raphael-vienne.md: 2247 tokens within limit
+2025-11-06 22:38:12,004 - INFO - API #40: 3,349tok in | 1,163tok out | 36.6s
+2025-11-06 22:38:12,006 - INFO - thealliance.ai__blog__spotlight-on-raphael-vienne.md: Extracted 8E + 7R
+2025-11-06 22:38:12,008 - INFO - thealliance.ai__blog__spotlight-on-raphael-vienne.md: 8E + 7R
+2025-11-06 22:38:13,509 - INFO - 
+============================================================
+2025-11-06 22:38:13,511 - INFO - File 41/86: thealliance.ai__blog__spotlight-on-sean-hughes.md
+2025-11-06 22:38:13,512 - INFO - ============================================================
+2025-11-06 22:38:13,522 - INFO - thealliance.ai__blog__spotlight-on-sean-hughes.md: 10,425 chars (~2,606 tokens)
+2025-11-06 22:38:13,523 - INFO - thealliance.ai__blog__spotlight-on-sean-hughes.md: 2606 tokens within limit
+2025-11-06 22:38:48,771 - INFO - API #41: 3,573tok in | 1,134tok out | 35.2s
+2025-11-06 22:38:48,777 - INFO - thealliance.ai__blog__spotlight-on-sean-hughes.md: Extracted 8E + 6R
+2025-11-06 22:38:48,794 - INFO - thealliance.ai__blog__spotlight-on-sean-hughes.md: 8E + 6R
+2025-11-06 22:38:53,238 - INFO - 
+============================================================
+2025-11-06 22:38:53,239 - INFO - File 42/86: thealliance.ai__blog__spotlight-on-supratick-mukhopadhyay.md
+2025-11-06 22:38:53,239 - INFO - ============================================================
+2025-11-06 22:38:53,256 - INFO - thealliance.ai__blog__spotlight-on-supratick-mukhopadhyay.md: 14,596 chars (~3,649 tokens)
+2025-11-06 22:38:53,257 - INFO - thealliance.ai__blog__spotlight-on-supratick-mukhopadhyay.md: 3649 tokens within limit
+2025-11-06 22:39:27,662 - INFO - API #42: 4,380tok in | 1,079tok out | 34.4s
+2025-11-06 22:39:27,665 - INFO - thealliance.ai__blog__spotlight-on-supratick-mukhopadhyay.md: Extracted 8E + 6R
+2025-11-06 22:39:27,666 - INFO - thealliance.ai__blog__spotlight-on-supratick-mukhopadhyay.md: 8E + 6R
+2025-11-06 22:39:29,166 - INFO - 
+============================================================
+2025-11-06 22:39:29,167 - INFO - File 43/86: thealliance.ai__blog__the-ai-alliance-comment-on-nist-ai-800-1-initial-public-draft.md
+2025-11-06 22:39:29,168 - INFO - ============================================================
+2025-11-06 22:39:29,179 - INFO - thealliance.ai__blog__the-ai-alliance-comment-on-nist-ai-800-1-initial-public-draft.md: 6,202 chars (~1,550 tokens)
+2025-11-06 22:39:29,180 - INFO - thealliance.ai__blog__the-ai-alliance-comment-on-nist-ai-800-1-initial-public-draft.md: 1550 tokens within limit
+2025-11-06 22:39:58,875 - INFO - API #43: 2,854tok in | 768tok out | 29.7s
+2025-11-06 22:39:58,877 - INFO - thealliance.ai__blog__the-ai-alliance-comment-on-nist-ai-800-1-initial-public-draft.md: Extracted 6E + 3R
+2025-11-06 22:39:58,878 - INFO - thealliance.ai__blog__the-ai-alliance-comment-on-nist-ai-800-1-initial-public-draft.md: 6E + 3R
+2025-11-06 22:40:03,314 - INFO - 
+============================================================
+2025-11-06 22:40:03,315 - INFO - File 44/86: thealliance.ai__blog__the-ai-alliance-forms-non-profit-ai-lab-and-ai-tec.md
+2025-11-06 22:40:03,316 - INFO - ============================================================
+2025-11-06 22:40:03,328 - INFO - thealliance.ai__blog__the-ai-alliance-forms-non-profit-ai-lab-and-ai-tec.md: 10,415 chars (~2,603 tokens)
+2025-11-06 22:40:03,329 - INFO - thealliance.ai__blog__the-ai-alliance-forms-non-profit-ai-lab-and-ai-tec.md: 2603 tokens within limit
+2025-11-06 22:40:45,201 - INFO - API #44: 3,687tok in | 1,384tok out | 41.9s
+2025-11-06 22:40:45,202 - INFO - thealliance.ai__blog__the-ai-alliance-forms-non-profit-ai-lab-and-ai-tec.md: Extracted 10E + 8R
+2025-11-06 22:40:45,203 - INFO - thealliance.ai__blog__the-ai-alliance-forms-non-profit-ai-lab-and-ai-tec.md: 10E + 8R
+2025-11-06 22:40:46,704 - INFO - 
+============================================================
+2025-11-06 22:40:46,707 - INFO - File 45/86: thealliance.ai__blog__the-ai-alliance-releases-new-ai-powered-programmin.md
+2025-11-06 22:40:46,709 - INFO - ============================================================
+2025-11-06 22:40:46,721 - INFO - thealliance.ai__blog__the-ai-alliance-releases-new-ai-powered-programmin.md: 10,979 chars (~2,744 tokens)
+2025-11-06 22:40:46,722 - INFO - thealliance.ai__blog__the-ai-alliance-releases-new-ai-powered-programmin.md: 2744 tokens within limit
+2025-11-06 22:41:26,600 - INFO - API #45: 3,805tok in | 1,302tok out | 39.9s
+2025-11-06 22:41:26,601 - INFO - thealliance.ai__blog__the-ai-alliance-releases-new-ai-powered-programmin.md: Extracted 10E + 7R
+2025-11-06 22:41:26,603 - INFO - thealliance.ai__blog__the-ai-alliance-releases-new-ai-powered-programmin.md: 10E + 7R
+2025-11-06 22:41:28,104 - INFO - 
+============================================================
+2025-11-06 22:41:28,105 - INFO - File 46/86: thealliance.ai__blog__the-state-of-open-source-trust.md
+2025-11-06 22:41:28,106 - INFO - ============================================================
+2025-11-06 22:41:28,113 - INFO - thealliance.ai__blog__the-state-of-open-source-trust.md: 25,800 chars (~6,450 tokens)
+2025-11-06 22:41:28,114 - INFO - thealliance.ai__blog__the-state-of-open-source-trust.md: 6450 tokens within limit
+2025-11-06 22:42:13,414 - INFO - API #46: 7,783tok in | 1,247tok out | 45.3s
+2025-11-06 22:42:13,415 - INFO - thealliance.ai__blog__the-state-of-open-source-trust.md: Extracted 10E + 7R
+2025-11-06 22:42:13,417 - INFO - thealliance.ai__blog__the-state-of-open-source-trust.md: 10E + 7R
+2025-11-06 22:42:14,918 - INFO - 
+============================================================
+2025-11-06 22:42:14,919 - INFO - File 47/86: thealliance.ai__blog__transform-pipelines-in-data-prep-kit.md
+2025-11-06 22:42:14,920 - INFO - ============================================================
+2025-11-06 22:42:14,927 - INFO - thealliance.ai__blog__transform-pipelines-in-data-prep-kit.md: 18,789 chars (~4,697 tokens)
+2025-11-06 22:42:14,927 - INFO - thealliance.ai__blog__transform-pipelines-in-data-prep-kit.md: 4697 tokens within limit
+2025-11-06 22:43:03,045 - INFO - API #47: 5,518tok in | 1,243tok out | 48.1s
+2025-11-06 22:43:03,049 - INFO - thealliance.ai__blog__transform-pipelines-in-data-prep-kit.md: Extracted 11E + 7R
+2025-11-06 22:43:03,052 - INFO - thealliance.ai__blog__transform-pipelines-in-data-prep-kit.md: 11E + 7R
+2025-11-06 22:43:04,554 - INFO - 
+============================================================
+2025-11-06 22:43:04,556 - INFO - File 48/86: thealliance.ai__community.md
+2025-11-06 22:43:04,556 - INFO - ============================================================
+2025-11-06 22:43:04,566 - INFO - thealliance.ai__community.md: 6,006 chars (~1,501 tokens)
+2025-11-06 22:43:04,567 - INFO - thealliance.ai__community.md: 1501 tokens within limit
+2025-11-06 22:43:52,597 - INFO - API #48: 2,578tok in | 1,549tok out | 48.0s
+2025-11-06 22:43:52,599 - INFO - thealliance.ai__community.md: Extracted 14E + 7R
+2025-11-06 22:43:52,601 - INFO - thealliance.ai__community.md: 14E + 7R
+2025-11-06 22:43:54,102 - INFO - 
+============================================================
+2025-11-06 22:43:54,104 - INFO - File 49/86: thealliance.ai__contact.md
+2025-11-06 22:43:54,105 - INFO - ============================================================
+2025-11-06 22:43:54,113 - INFO - thealliance.ai__contact.md: 4,811 chars (~1,202 tokens)
+2025-11-06 22:43:54,113 - INFO - thealliance.ai__contact.md: 1202 tokens within limit
+2025-11-06 22:44:33,675 - INFO - API #49: 2,210tok in | 1,329tok out | 39.6s
+2025-11-06 22:44:33,676 - INFO - thealliance.ai__contact.md: Extracted 10E + 7R
+2025-11-06 22:44:33,677 - INFO - thealliance.ai__contact.md: 10E + 7R
+2025-11-06 22:44:35,178 - INFO - 
+============================================================
+2025-11-06 22:44:35,179 - INFO - File 50/86: thealliance.ai__contribute.md
+2025-11-06 22:44:35,180 - INFO - ============================================================
+2025-11-06 22:44:35,188 - INFO - thealliance.ai__contribute.md: 7,091 chars (~1,772 tokens)
+2025-11-06 22:44:35,188 - INFO - thealliance.ai__contribute.md: 1772 tokens within limit
+2025-11-06 22:45:07,312 - INFO - API #50: 2,735tok in | 1,071tok out | 32.1s
+2025-11-06 22:45:07,313 - INFO - thealliance.ai__contribute.md: Extracted 9E + 6R
+2025-11-06 22:45:07,314 - INFO - thealliance.ai__contribute.md: 9E + 6R
+2025-11-06 22:45:08,815 - INFO - 
+============================================================
+2025-11-06 22:45:08,816 - INFO - File 51/86: thealliance.ai__core-projects.md
+2025-11-06 22:45:08,817 - INFO - ============================================================
+2025-11-06 22:45:08,822 - INFO - thealliance.ai__core-projects.md: 11,191 chars (~2,797 tokens)
+2025-11-06 22:45:08,823 - INFO - thealliance.ai__core-projects.md: 2797 tokens within limit
+2025-11-06 22:45:55,019 - INFO - API #51: 3,776tok in | 1,357tok out | 46.2s
+2025-11-06 22:45:55,020 - INFO - thealliance.ai__core-projects.md: Extracted 10E + 7R
+2025-11-06 22:45:55,021 - INFO - thealliance.ai__core-projects.md: 10E + 7R
+2025-11-06 22:45:56,522 - INFO - 
+============================================================
+2025-11-06 22:45:56,522 - INFO - File 52/86: thealliance.ai__core-projects__ai-accelerator-software-ecosystem-guide.md
+2025-11-06 22:45:56,523 - INFO - ============================================================
+2025-11-06 22:45:56,532 - INFO - thealliance.ai__core-projects__ai-accelerator-software-ecosystem-guide.md: 5,862 chars (~1,465 tokens)
+2025-11-06 22:45:56,533 - INFO - thealliance.ai__core-projects__ai-accelerator-software-ecosystem-guide.md: 1465 tokens within limit
+2025-11-06 22:46:31,411 - INFO - API #52: 2,484tok in | 1,264tok out | 34.9s
+2025-11-06 22:46:31,413 - INFO - thealliance.ai__core-projects__ai-accelerator-software-ecosystem-guide.md: Extracted 10E + 7R
+2025-11-06 22:46:31,415 - INFO - thealliance.ai__core-projects__ai-accelerator-software-ecosystem-guide.md: 10E + 7R
+2025-11-06 22:46:32,916 - INFO - 
+============================================================
+2025-11-06 22:46:32,918 - INFO - File 53/86: thealliance.ai__core-projects__guide-to-essential-competencies-for-ai.md
+2025-11-06 22:46:32,919 - INFO - ============================================================
+2025-11-06 22:46:32,929 - INFO - thealliance.ai__core-projects__guide-to-essential-competencies-for-ai.md: 7,034 chars (~1,758 tokens)
+2025-11-06 22:46:32,930 - INFO - thealliance.ai__core-projects__guide-to-essential-competencies-for-ai.md: 1758 tokens within limit
+2025-11-06 22:46:54,794 - INFO - API #53: 2,705tok in | 743tok out | 21.9s
+2025-11-06 22:46:54,795 - INFO - thealliance.ai__core-projects__guide-to-essential-competencies-for-ai.md: Extracted 7E + 3R
+2025-11-06 22:46:54,797 - INFO - thealliance.ai__core-projects__guide-to-essential-competencies-for-ai.md: 7E + 3R
+2025-11-06 22:46:56,298 - INFO - 
+============================================================
+2025-11-06 22:46:56,302 - INFO - File 54/86: thealliance.ai__core-projects__industry-open-fms-initiative.md
+2025-11-06 22:46:56,303 - INFO - ============================================================
+2025-11-06 22:46:56,308 - INFO - thealliance.ai__core-projects__industry-open-fms-initiative.md: 5,888 chars (~1,472 tokens)
+2025-11-06 22:46:56,308 - INFO - thealliance.ai__core-projects__industry-open-fms-initiative.md: 1472 tokens within limit
+2025-11-06 22:47:26,645 - INFO - API #54: 2,479tok in | 1,040tok out | 30.3s
+2025-11-06 22:47:26,647 - INFO - thealliance.ai__core-projects__industry-open-fms-initiative.md: Extracted 8E + 6R
+2025-11-06 22:47:26,647 - INFO - thealliance.ai__core-projects__industry-open-fms-initiative.md: 8E + 6R
+2025-11-06 22:47:28,148 - INFO - 
+============================================================
+2025-11-06 22:47:28,149 - INFO - File 55/86: thealliance.ai__core-projects__ntia_request.md
+2025-11-06 22:47:28,150 - INFO - ============================================================
+2025-11-06 22:47:28,155 - INFO - thealliance.ai__core-projects__ntia_request.md: 5,194 chars (~1,298 tokens)
+2025-11-06 22:47:28,156 - INFO - thealliance.ai__core-projects__ntia_request.md: 1298 tokens within limit
+2025-11-06 22:48:03,400 - INFO - API #55: 2,365tok in | 1,152tok out | 35.2s
+2025-11-06 22:48:03,401 - INFO - thealliance.ai__core-projects__ntia_request.md: Extracted 7E + 6R
+2025-11-06 22:48:03,402 - INFO - thealliance.ai__core-projects__ntia_request.md: 7E + 6R
+2025-11-06 22:48:04,903 - INFO - 
+============================================================
+2025-11-06 22:48:04,904 - INFO - File 56/86: thealliance.ai__core-projects__open-trusted-data-initiative.md
+2025-11-06 22:48:04,904 - INFO - ============================================================
+2025-11-06 22:48:04,911 - INFO - thealliance.ai__core-projects__open-trusted-data-initiative.md: 6,114 chars (~1,528 tokens)
+2025-11-06 22:48:04,911 - INFO - thealliance.ai__core-projects__open-trusted-data-initiative.md: 1528 tokens within limit
+2025-11-06 22:48:30,418 - INFO - API #56: 2,520tok in | 753tok out | 25.5s
+2025-11-06 22:48:30,420 - INFO - thealliance.ai__core-projects__open-trusted-data-initiative.md: Extracted 7E + 3R
+2025-11-06 22:48:30,421 - INFO - thealliance.ai__core-projects__open-trusted-data-initiative.md: 7E + 3R
+2025-11-06 22:48:31,921 - INFO - 
+============================================================
+2025-11-06 22:48:31,925 - INFO - File 57/86: thealliance.ai__core-projects__safety-priorities-ranking-by-domain.md
+2025-11-06 22:48:31,926 - INFO - ============================================================
+2025-11-06 22:48:31,933 - INFO - thealliance.ai__core-projects__safety-priorities-ranking-by-domain.md: 5,711 chars (~1,427 tokens)
+2025-11-06 22:48:31,933 - INFO - thealliance.ai__core-projects__safety-priorities-ranking-by-domain.md: 1427 tokens within limit
+2025-11-06 22:48:59,569 - INFO - API #57: 2,451tok in | 828tok out | 27.6s
+2025-11-06 22:48:59,570 - INFO - thealliance.ai__core-projects__safety-priorities-ranking-by-domain.md: Extracted 8E + 3R
+2025-11-06 22:48:59,571 - INFO - thealliance.ai__core-projects__safety-priorities-ranking-by-domain.md: 8E + 3R
+2025-11-06 22:49:01,073 - INFO - 
+============================================================
+2025-11-06 22:49:01,074 - INFO - File 58/86: thealliance.ai__core-projects__sb1047.md
+2025-11-06 22:49:01,075 - INFO - ============================================================
+2025-11-06 22:49:01,081 - INFO - thealliance.ai__core-projects__sb1047.md: 11,568 chars (~2,892 tokens)
+2025-11-06 22:49:01,081 - INFO - thealliance.ai__core-projects__sb1047.md: 2892 tokens within limit
+2025-11-06 22:49:46,144 - INFO - API #58: 3,552tok in | 1,412tok out | 45.1s
+2025-11-06 22:49:46,146 - INFO - thealliance.ai__core-projects__sb1047.md: Extracted 9E + 7R
+2025-11-06 22:49:46,148 - INFO - thealliance.ai__core-projects__sb1047.md: 9E + 7R
+2025-11-06 22:49:47,649 - INFO - 
+============================================================
+2025-11-06 22:49:47,650 - INFO - File 59/86: thealliance.ai__core-projects__the-living-guide-to-applying-ai.md
+2025-11-06 22:49:47,651 - INFO - ============================================================
+2025-11-06 22:49:47,660 - INFO - thealliance.ai__core-projects__the-living-guide-to-applying-ai.md: 5,995 chars (~1,498 tokens)
+2025-11-06 22:49:47,660 - INFO - thealliance.ai__core-projects__the-living-guide-to-applying-ai.md: 1498 tokens within limit
+2025-11-06 22:50:25,866 - INFO - API #59: 2,505tok in | 1,073tok out | 38.2s
+2025-11-06 22:50:25,867 - INFO - thealliance.ai__core-projects__the-living-guide-to-applying-ai.md: Extracted 7E + 6R
+2025-11-06 22:50:25,868 - INFO - thealliance.ai__core-projects__the-living-guide-to-applying-ai.md: 7E + 6R
+2025-11-06 22:50:27,369 - INFO - 
+============================================================
+2025-11-06 22:50:27,370 - INFO - File 60/86: thealliance.ai__core-projects__time-series-data-and-model-initiative.md
+2025-11-06 22:50:27,371 - INFO - ============================================================
+2025-11-06 22:50:27,376 - INFO - thealliance.ai__core-projects__time-series-data-and-model-initiative.md: 6,377 chars (~1,594 tokens)
+2025-11-06 22:50:27,377 - INFO - thealliance.ai__core-projects__time-series-data-and-model-initiative.md: 1594 tokens within limit
+2025-11-06 22:51:13,442 - INFO - API #60: 2,560tok in | 1,206tok out | 46.1s
+2025-11-06 22:51:13,443 - INFO - thealliance.ai__core-projects__time-series-data-and-model-initiative.md: Extracted 9E + 7R
+2025-11-06 22:51:13,444 - INFO - thealliance.ai__core-projects__time-series-data-and-model-initiative.md: 9E + 7R
+2025-11-06 22:51:14,945 - INFO - 
+============================================================
+2025-11-06 22:51:14,948 - INFO - File 61/86: thealliance.ai__core-projects__trust-and-safety-evaluations.md
+2025-11-06 22:51:14,949 - INFO - ============================================================
+2025-11-06 22:51:14,960 - INFO - thealliance.ai__core-projects__trust-and-safety-evaluations.md: 5,131 chars (~1,282 tokens)
+2025-11-06 22:51:14,961 - INFO - thealliance.ai__core-projects__trust-and-safety-evaluations.md: 1282 tokens within limit
+2025-11-06 22:51:51,120 - INFO - API #61: 2,351tok in | 965tok out | 36.2s
+2025-11-06 22:51:51,124 - INFO - thealliance.ai__core-projects__trust-and-safety-evaluations.md: Extracted 9E + 5R
+2025-11-06 22:51:51,125 - INFO - thealliance.ai__core-projects__trust-and-safety-evaluations.md: 9E + 5R
+2025-11-06 22:51:52,626 - INFO - 
+============================================================
+2025-11-06 22:51:52,627 - INFO - File 62/86: thealliance.ai__core-projects__trust-user-guide.md
+2025-11-06 22:51:52,628 - INFO - ============================================================
+2025-11-06 22:51:52,634 - INFO - thealliance.ai__core-projects__trust-user-guide.md: 5,520 chars (~1,380 tokens)
+2025-11-06 22:51:52,634 - INFO - thealliance.ai__core-projects__trust-user-guide.md: 1380 tokens within limit
+2025-11-06 22:52:24,363 - INFO - API #62: 2,397tok in | 906tok out | 31.7s
+2025-11-06 22:52:24,365 - INFO - thealliance.ai__core-projects__trust-user-guide.md: Extracted 8E + 5R
+2025-11-06 22:52:24,366 - INFO - thealliance.ai__core-projects__trust-user-guide.md: 8E + 5R
+2025-11-06 22:52:25,867 - INFO - 
+============================================================
+2025-11-06 22:52:25,868 - INFO - File 63/86: thealliance.ai__core-projects__trusted-evals.md
+2025-11-06 22:52:25,869 - INFO - ============================================================
+2025-11-06 22:52:25,875 - INFO - thealliance.ai__core-projects__trusted-evals.md: 9,290 chars (~2,322 tokens)
+2025-11-06 22:52:25,875 - INFO - thealliance.ai__core-projects__trusted-evals.md: 2322 tokens within limit
+2025-11-06 22:53:03,570 - INFO - API #63: 3,274tok in | 869tok out | 37.7s
+2025-11-06 22:53:03,571 - INFO - thealliance.ai__core-projects__trusted-evals.md: Extracted 8E + 3R
+2025-11-06 22:53:03,572 - INFO - thealliance.ai__core-projects__trusted-evals.md: 8E + 3R
+2025-11-06 22:53:05,073 - INFO - 
+============================================================
+2025-11-06 22:53:05,073 - INFO - File 64/86: thealliance.ai__docs__AI_Alliance_Association_Statement_in_Opposition_to_NY_RAISE_Act.md
+2025-11-06 22:53:05,074 - INFO - ============================================================
+2025-11-06 22:53:05,081 - INFO - thealliance.ai__docs__AI_Alliance_Association_Statement_in_Opposition_to_NY_RAISE_Act.md: 5,689 chars (~1,422 tokens)
+2025-11-06 22:53:05,081 - INFO - thealliance.ai__docs__AI_Alliance_Association_Statement_in_Opposition_to_NY_RAISE_Act.md: 1422 tokens within limit
+2025-11-06 22:53:59,088 - INFO - API #64: 2,131tok in | 1,360tok out | 54.0s
+2025-11-06 22:53:59,089 - INFO - thealliance.ai__docs__AI_Alliance_Association_Statement_in_Opposition_to_NY_RAISE_Act.md: Extracted 8E + 7R
+2025-11-06 22:53:59,091 - INFO - thealliance.ai__docs__AI_Alliance_Association_Statement_in_Opposition_to_NY_RAISE_Act.md: 8E + 7R
+2025-11-06 22:54:00,592 - INFO - 
+============================================================
+2025-11-06 22:54:00,593 - INFO - File 65/86: thealliance.ai__docs__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md
+2025-11-06 22:54:00,594 - INFO - ============================================================
+2025-11-06 22:54:00,603 - INFO - thealliance.ai__docs__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: 8,244 chars (~2,061 tokens)
+2025-11-06 22:54:00,604 - INFO - thealliance.ai__docs__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: 2061 tokens within limit
+2025-11-06 22:54:52,832 - INFO - API #65: 2,728tok in | 1,249tok out | 52.2s
+2025-11-06 22:54:52,834 - INFO - thealliance.ai__docs__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: Extracted 11E + 6R
+2025-11-06 22:54:52,835 - INFO - thealliance.ai__docs__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md: 11E + 6R
+2025-11-06 22:54:54,336 - INFO - 
+============================================================
+2025-11-06 22:54:54,337 - INFO - File 66/86: thealliance.ai__docs__guide-to-essential-competencies-for-ai.md
+2025-11-06 22:54:54,339 - INFO - ============================================================
+2025-11-06 22:54:54,375 - INFO - thealliance.ai__docs__guide-to-essential-competencies-for-ai.md: 112,385 chars (~28,096 tokens)
+2025-11-06 22:54:54,376 - INFO - thealliance.ai__docs__guide-to-essential-competencies-for-ai.md: 28096 tokens within limit
+2025-11-06 22:56:44,029 - INFO - API #66: 20,206tok in | 1,886tok out | 109.6s
+2025-11-06 22:56:44,031 - INFO - thealliance.ai__docs__guide-to-essential-competencies-for-ai.md: Extracted 16E + 7R
+2025-11-06 22:56:44,035 - INFO - thealliance.ai__docs__guide-to-essential-competencies-for-ai.md: 16E + 7R
+2025-11-06 22:56:45,537 - INFO - 
+============================================================
+2025-11-06 22:56:45,538 - INFO - File 67/86: thealliance.ai__events.md
+2025-11-06 22:56:45,539 - INFO - ============================================================
+2025-11-06 22:56:45,548 - INFO - thealliance.ai__events.md: 8,017 chars (~2,004 tokens)
+2025-11-06 22:56:45,549 - INFO - thealliance.ai__events.md: 2004 tokens within limit
+2025-11-06 22:57:42,354 - INFO - API #67: 3,460tok in | 1,276tok out | 56.8s
+2025-11-06 22:57:42,355 - INFO - thealliance.ai__events.md: Extracted 10E + 7R
+2025-11-06 22:57:42,355 - INFO - thealliance.ai__events.md: 10E + 7R
+2025-11-06 22:57:43,857 - INFO - 
+============================================================
+2025-11-06 22:57:43,858 - INFO - File 68/86: thealliance.ai__focus-areas__advocacy.md
+2025-11-06 22:57:43,859 - INFO - ============================================================
+2025-11-06 22:57:43,865 - INFO - thealliance.ai__focus-areas__advocacy.md: 6,700 chars (~1,675 tokens)
+2025-11-06 22:57:43,865 - INFO - thealliance.ai__focus-areas__advocacy.md: 1675 tokens within limit
+2025-11-06 22:58:20,270 - INFO - API #68: 2,736tok in | 953tok out | 36.4s
+2025-11-06 22:58:20,271 - INFO - thealliance.ai__focus-areas__advocacy.md: Extracted 7E + 5R
+2025-11-06 22:58:20,273 - INFO - thealliance.ai__focus-areas__advocacy.md: 7E + 5R
+2025-11-06 22:58:21,774 - INFO - 
+============================================================
+2025-11-06 22:58:21,775 - INFO - File 69/86: thealliance.ai__focus-areas__applications-and-tools.md
+2025-11-06 22:58:21,776 - INFO - ============================================================
+2025-11-06 22:58:21,785 - INFO - thealliance.ai__focus-areas__applications-and-tools.md: 5,424 chars (~1,356 tokens)
+2025-11-06 22:58:21,785 - INFO - thealliance.ai__focus-areas__applications-and-tools.md: 1356 tokens within limit
+2025-11-06 22:58:49,850 - INFO - API #69: 2,399tok in | 883tok out | 28.1s
+2025-11-06 22:58:49,851 - INFO - thealliance.ai__focus-areas__applications-and-tools.md: Extracted 7E + 3R
+2025-11-06 22:58:49,852 - INFO - thealliance.ai__focus-areas__applications-and-tools.md: 7E + 3R
+2025-11-06 22:58:51,353 - INFO - 
+============================================================
+2025-11-06 22:58:51,354 - INFO - File 70/86: thealliance.ai__focus-areas__foundation-models-datasets.md
+2025-11-06 22:58:51,355 - INFO - ============================================================
+2025-11-06 22:58:51,364 - INFO - thealliance.ai__focus-areas__foundation-models-datasets.md: 8,327 chars (~2,081 tokens)
+2025-11-06 22:58:51,364 - INFO - thealliance.ai__focus-areas__foundation-models-datasets.md: 2081 tokens within limit
+2025-11-06 22:59:47,585 - INFO - API #70: 2,991tok in | 1,287tok out | 56.2s
+2025-11-06 22:59:47,585 - INFO - thealliance.ai__focus-areas__foundation-models-datasets.md: Extracted 9E + 7R
+2025-11-06 22:59:47,586 - INFO - thealliance.ai__focus-areas__foundation-models-datasets.md: 9E + 7R
+2025-11-06 22:59:49,087 - INFO - 
+============================================================
+2025-11-06 22:59:49,106 - INFO - File 71/86: thealliance.ai__focus-areas__hardware-enablement.md
+2025-11-06 22:59:49,107 - INFO - ============================================================
+2025-11-06 22:59:49,122 - INFO - thealliance.ai__focus-areas__hardware-enablement.md: 5,197 chars (~1,299 tokens)
+2025-11-06 22:59:49,124 - INFO - thealliance.ai__focus-areas__hardware-enablement.md: 1299 tokens within limit
+2025-11-06 23:01:00,988 - INFO - API #71: 2,347tok in | 1,340tok out | 71.9s
+2025-11-06 23:01:00,989 - INFO - thealliance.ai__focus-areas__hardware-enablement.md: Extracted 10E + 7R
+2025-11-06 23:01:00,989 - INFO - thealliance.ai__focus-areas__hardware-enablement.md: 10E + 7R
+2025-11-06 23:01:02,491 - INFO - 
+============================================================
+2025-11-06 23:01:02,492 - INFO - File 72/86: thealliance.ai__focus-areas__skills-education.md
+2025-11-06 23:01:02,493 - INFO - ============================================================
+2025-11-06 23:01:02,505 - INFO - thealliance.ai__focus-areas__skills-education.md: 4,841 chars (~1,210 tokens)
+2025-11-06 23:01:02,505 - INFO - thealliance.ai__focus-areas__skills-education.md: 1210 tokens within limit
+2025-11-06 23:01:55,889 - INFO - API #72: 2,289tok in | 1,270tok out | 53.4s
+2025-11-06 23:01:55,890 - INFO - thealliance.ai__focus-areas__skills-education.md: Extracted 10E + 7R
+2025-11-06 23:01:55,894 - INFO - thealliance.ai__focus-areas__skills-education.md: 10E + 7R
+2025-11-06 23:01:57,395 - INFO - 
+============================================================
+2025-11-06 23:01:57,396 - INFO - File 73/86: thealliance.ai__focus-areas__trust-and-safety.md
+2025-11-06 23:01:57,397 - INFO - ============================================================
+2025-11-06 23:01:57,405 - INFO - thealliance.ai__focus-areas__trust-and-safety.md: 7,740 chars (~1,935 tokens)
+2025-11-06 23:01:57,405 - INFO - thealliance.ai__focus-areas__trust-and-safety.md: 1935 tokens within limit
+2025-11-06 23:02:36,732 - INFO - API #73: 2,957tok in | 1,136tok out | 39.3s
+2025-11-06 23:02:36,733 - INFO - thealliance.ai__focus-areas__trust-and-safety.md: Extracted 7E + 6R
+2025-11-06 23:02:36,734 - INFO - thealliance.ai__focus-areas__trust-and-safety.md: 7E + 6R
+2025-11-06 23:02:38,235 - INFO - 
+============================================================
+2025-11-06 23:02:38,236 - INFO - File 74/86: thealliance.ai__governance.md
+2025-11-06 23:02:38,236 - INFO - ============================================================
+2025-11-06 23:02:38,248 - INFO - thealliance.ai__governance.md: 21,658 chars (~5,414 tokens)
+2025-11-06 23:02:38,249 - INFO - thealliance.ai__governance.md: 5414 tokens within limit
+2025-11-06 23:03:44,482 - INFO - API #74: 5,424tok in | 1,583tok out | 66.2s
+2025-11-06 23:03:44,483 - INFO - thealliance.ai__governance.md: Extracted 13E + 7R
+2025-11-06 23:03:44,484 - INFO - thealliance.ai__governance.md: 13E + 7R
+2025-11-06 23:03:45,985 - INFO - 
+============================================================
+2025-11-06 23:03:45,986 - INFO - File 75/86: thealliance.ai__index.md
+2025-11-06 23:03:45,986 - INFO - ============================================================
+2025-11-06 23:03:45,995 - INFO - thealliance.ai__index.md: 25,770 chars (~6,442 tokens)
+2025-11-06 23:03:45,995 - INFO - thealliance.ai__index.md: 6442 tokens within limit
+2025-11-06 23:04:45,733 - INFO - API #75: 9,803tok in | 1,064tok out | 59.7s
+2025-11-06 23:04:45,735 - INFO - thealliance.ai__index.md: Extracted 10E + 3R
+2025-11-06 23:04:45,736 - INFO - thealliance.ai__index.md: 10E + 3R
+2025-11-06 23:04:47,237 - INFO - 
+============================================================
+2025-11-06 23:04:47,238 - INFO - File 76/86: thealliance.ai__leadership.md
+2025-11-06 23:04:47,238 - INFO - ============================================================
+2025-11-06 23:04:47,248 - INFO - thealliance.ai__leadership.md: 13,235 chars (~3,308 tokens)
+2025-11-06 23:04:47,248 - INFO - thealliance.ai__leadership.md: 3308 tokens within limit
+2025-11-06 23:05:38,796 - INFO - API #76: 4,160tok in | 1,266tok out | 51.5s
+2025-11-06 23:05:38,797 - INFO - thealliance.ai__leadership.md: Extracted 10E + 7R
+2025-11-06 23:05:38,799 - INFO - thealliance.ai__leadership.md: 10E + 7R
+2025-11-06 23:05:40,300 - INFO - 
+============================================================
+2025-11-06 23:05:40,301 - INFO - File 77/86: thealliance.ai__membership.md
+2025-11-06 23:05:40,302 - INFO - ============================================================
+2025-11-06 23:05:40,316 - INFO - thealliance.ai__membership.md: 5,626 chars (~1,406 tokens)
+2025-11-06 23:05:40,316 - INFO - thealliance.ai__membership.md: 1406 tokens within limit
+2025-11-06 23:07:16,470 - INFO - API #77: 2,355tok in | 1,230tok out | 96.2s
+2025-11-06 23:07:16,471 - INFO - thealliance.ai__membership.md: Extracted 10E + 7R
+2025-11-06 23:07:16,472 - INFO - thealliance.ai__membership.md: 10E + 7R
+2025-11-06 23:07:17,973 - INFO - 
+============================================================
+2025-11-06 23:07:17,974 - INFO - File 78/86: thealliance.ai__our-work.md
+2025-11-06 23:07:17,975 - INFO - ============================================================
+2025-11-06 23:07:17,982 - INFO - thealliance.ai__our-work.md: 14,032 chars (~3,508 tokens)
+2025-11-06 23:07:17,983 - INFO - thealliance.ai__our-work.md: 3508 tokens within limit
+2025-11-06 23:08:06,028 - INFO - API #78: 4,514tok in | 1,229tok out | 48.0s
+2025-11-06 23:08:06,029 - INFO - thealliance.ai__our-work.md: Extracted 10E + 7R
+2025-11-06 23:08:06,031 - INFO - thealliance.ai__our-work.md: 10E + 7R
+2025-11-06 23:08:07,532 - INFO - 
+============================================================
+2025-11-06 23:08:07,533 - INFO - File 79/86: thealliance.ai__working-groups__advocacy.md
+2025-11-06 23:08:07,533 - INFO - ============================================================
+2025-11-06 23:08:07,539 - INFO - thealliance.ai__working-groups__advocacy.md: 7,842 chars (~1,960 tokens)
+2025-11-06 23:08:07,540 - INFO - thealliance.ai__working-groups__advocacy.md: 1960 tokens within limit
+2025-11-06 23:09:06,050 - INFO - API #79: 2,946tok in | 1,255tok out | 58.5s
+2025-11-06 23:09:06,054 - INFO - thealliance.ai__working-groups__advocacy.md: Extracted 10E + 7R
+2025-11-06 23:09:06,057 - INFO - thealliance.ai__working-groups__advocacy.md: 10E + 7R
+2025-11-06 23:09:07,559 - INFO - 
+============================================================
+2025-11-06 23:09:07,560 - INFO - File 80/86: thealliance.ai__working-groups__ai-for-drug-discovery.md
+2025-11-06 23:09:07,561 - INFO - ============================================================
+2025-11-06 23:09:07,571 - INFO - thealliance.ai__working-groups__ai-for-drug-discovery.md: 8,208 chars (~2,052 tokens)
+2025-11-06 23:09:07,572 - INFO - thealliance.ai__working-groups__ai-for-drug-discovery.md: 2052 tokens within limit
+2025-11-06 23:10:22,011 - INFO - API #80: 3,011tok in | 1,270tok out | 74.4s
+2025-11-06 23:10:22,012 - INFO - thealliance.ai__working-groups__ai-for-drug-discovery.md: Extracted 10E + 7R
+2025-11-06 23:10:22,015 - INFO - thealliance.ai__working-groups__ai-for-drug-discovery.md: 10E + 7R
+2025-11-06 23:10:23,516 - INFO - 
+============================================================
+2025-11-06 23:10:23,517 - INFO - File 81/86: thealliance.ai__working-groups__applications-and-tools.md
+2025-11-06 23:10:23,518 - INFO - ============================================================
+2025-11-06 23:10:23,527 - INFO - thealliance.ai__working-groups__applications-and-tools.md: 5,564 chars (~1,391 tokens)
+2025-11-06 23:10:23,528 - INFO - thealliance.ai__working-groups__applications-and-tools.md: 1391 tokens within limit
+2025-11-06 23:11:08,169 - INFO - API #81: 2,387tok in | 971tok out | 44.6s
+2025-11-06 23:11:08,171 - INFO - thealliance.ai__working-groups__applications-and-tools.md: Extracted 8E + 7R
+2025-11-06 23:11:08,173 - INFO - thealliance.ai__working-groups__applications-and-tools.md: 8E + 7R
+2025-11-06 23:11:09,674 - INFO - 
+============================================================
+2025-11-06 23:11:09,675 - INFO - File 82/86: thealliance.ai__working-groups__climate-and-sustainability.md
+2025-11-06 23:11:09,676 - INFO - ============================================================
+2025-11-06 23:11:09,682 - INFO - thealliance.ai__working-groups__climate-and-sustainability.md: 8,771 chars (~2,192 tokens)
+2025-11-06 23:11:09,683 - INFO - thealliance.ai__working-groups__climate-and-sustainability.md: 2192 tokens within limit
+2025-11-06 23:12:34,098 - INFO - API #82: 3,162tok in | 1,306tok out | 84.4s
+2025-11-06 23:12:34,103 - INFO - thealliance.ai__working-groups__climate-and-sustainability.md: Extracted 10E + 7R
+2025-11-06 23:12:34,107 - INFO - thealliance.ai__working-groups__climate-and-sustainability.md: 10E + 7R
+2025-11-06 23:12:35,610 - INFO - 
+============================================================
+2025-11-06 23:12:35,614 - INFO - File 83/86: thealliance.ai__working-groups__foundation-models.md
+2025-11-06 23:12:35,615 - INFO - ============================================================
+2025-11-06 23:12:35,626 - INFO - thealliance.ai__working-groups__foundation-models.md: 5,605 chars (~1,401 tokens)
+2025-11-06 23:12:35,627 - INFO - thealliance.ai__working-groups__foundation-models.md: 1401 tokens within limit
+2025-11-06 23:13:11,837 - INFO - API #83: 2,402tok in | 792tok out | 36.2s
+2025-11-06 23:13:11,838 - INFO - thealliance.ai__working-groups__foundation-models.md: Extracted 8E + 3R
+2025-11-06 23:13:11,839 - INFO - thealliance.ai__working-groups__foundation-models.md: 8E + 3R
+2025-11-06 23:13:13,340 - INFO - 
+============================================================
+2025-11-06 23:13:13,341 - INFO - File 84/86: thealliance.ai__working-groups__hardware-enablement.md
+2025-11-06 23:13:13,341 - INFO - ============================================================
+2025-11-06 23:13:13,347 - INFO - thealliance.ai__working-groups__hardware-enablement.md: 5,546 chars (~1,386 tokens)
+2025-11-06 23:13:13,347 - INFO - thealliance.ai__working-groups__hardware-enablement.md: 1386 tokens within limit
+2025-11-06 23:14:00,007 - INFO - API #84: 2,387tok in | 862tok out | 46.7s
+2025-11-06 23:14:00,008 - INFO - thealliance.ai__working-groups__hardware-enablement.md: Extracted 8E + 5R
+2025-11-06 23:14:00,009 - INFO - thealliance.ai__working-groups__hardware-enablement.md: 8E + 5R
+2025-11-06 23:14:04,451 - INFO - 
+============================================================
+2025-11-06 23:14:04,452 - INFO - File 85/86: thealliance.ai__working-groups__materials-and-chemistry.md
+2025-11-06 23:14:04,452 - INFO - ============================================================
+2025-11-06 23:14:04,459 - INFO - thealliance.ai__working-groups__materials-and-chemistry.md: 11,860 chars (~2,965 tokens)
+2025-11-06 23:14:04,459 - INFO - thealliance.ai__working-groups__materials-and-chemistry.md: 2965 tokens within limit
+2025-11-06 23:14:53,227 - INFO - API #85: 4,002tok in | 1,300tok out | 48.8s
+2025-11-06 23:14:53,228 - INFO - thealliance.ai__working-groups__materials-and-chemistry.md: Extracted 10E + 7R
+2025-11-06 23:14:53,229 - INFO - thealliance.ai__working-groups__materials-and-chemistry.md: 10E + 7R
+2025-11-06 23:14:54,730 - INFO - 
+============================================================
+2025-11-06 23:14:54,731 - INFO - File 86/86: thealliance.ai__working-groups__skills--education.md
+2025-11-06 23:14:54,732 - INFO - ============================================================
+2025-11-06 23:14:54,740 - INFO - thealliance.ai__working-groups__skills--education.md: 5,939 chars (~1,484 tokens)
+2025-11-06 23:14:54,741 - INFO - thealliance.ai__working-groups__skills--education.md: 1484 tokens within limit
+2025-11-06 23:15:34,572 - INFO - API #86: 2,481tok in | 1,139tok out | 39.8s
+2025-11-06 23:15:34,574 - INFO - thealliance.ai__working-groups__skills--education.md: Extracted 9E + 6R
+2025-11-06 23:15:34,575 - INFO - thealliance.ai__working-groups__skills--education.md: 9E + 6R
+2025-11-06 23:15:34,720 - INFO - 
+============================================================
+2025-11-06 23:15:34,721 - INFO - COMPLETE
+2025-11-06 23:15:34,722 - INFO - Files: 86✓ 0⚠️ 0⏸️  0✗
+2025-11-06 23:15:34,722 - INFO - Graph: 417 nodes | 486 edges
+2025-11-06 23:15:34,723 - INFO - API: 86 calls (0 failed)
+2025-11-06 23:15:34,724 - INFO - Tokens: 330,740 in | 98,860 out
+2025-11-06 23:15:34,724 - INFO - Time: 3738.2s | Size: 0.50MB
+2025-11-06 23:15:34,725 - INFO - Output: workspace/graph_data/phase1_output.json
+2025-11-06 23:15:34,726 - INFO - ============================================================
+
+2025-11-06 23:15:34,735 - INFO - 
+================================================================================
+SUCCESS
+================================================================================
+Time: 2025-11-06 23:15:34
+Files: 86/86
+Graph: 417 nodes | 486 edges
+API: 86 calls
+Tokens: 330,740 in | 98,860 out
+Duration: 3738.2s
+================================================================================
+

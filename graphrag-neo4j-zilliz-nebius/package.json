@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "neo4j": "^2.0.0-RC2"
+  }
+}

@@ -1,0 +1,265 @@
+
+================================================================================
+RUN: 20251106_231534
+Timestamp: 2025-11-06 23:15:34
+Successfully Processed: 86 files
+================================================================================
+thealliance.ai__about-aia.md
+  Chars: 8694, Tokens: 2173
+  Entities: 8, Relationships: 3
+thealliance.ai__affiliated-projects.md
+  Chars: 6965, Tokens: 1741
+  Entities: 10, Relationships: 6
+thealliance.ai__affiliated-projects__bigcode.md
+  Chars: 5080, Tokens: 1270
+  Entities: 9, Relationships: 6
+thealliance.ai__affiliated-projects__cornell_generative.md
+  Chars: 4663, Tokens: 1165
+  Entities: 10, Relationships: 7
+thealliance.ai__affiliated-projects__ibm_granite.md
+  Chars: 5686, Tokens: 1421
+  Entities: 7, Relationships: 5
+thealliance.ai__affiliated-projects__mbzuai_llm.md
+  Chars: 5032, Tokens: 1258
+  Entities: 7, Relationships: 3
+thealliance.ai__affiliated-projects__quansight_ragna.md
+  Chars: 6436, Tokens: 1609
+  Entities: 6, Relationships: 3
+thealliance.ai__affiliated-projects__trusty_ai.md
+  Chars: 4973, Tokens: 1243
+  Entities: 10, Relationships: 7
+thealliance.ai__ai-alliance-open-innovation-principles.md
+  Chars: 8476, Tokens: 2119
+  Entities: 10, Relationships: 7
+thealliance.ai__aia-members.md
+  Chars: 25788, Tokens: 6447
+  Entities: 16, Relationships: 7
+thealliance.ai__become-a-collaborator.md
+  Chars: 5636, Tokens: 1409
+  Entities: 10, Relationships: 6
+thealliance.ai__blog.md
+  Chars: 11364, Tokens: 2841
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__advancing-domain-specific-qa-the-ai-alliances-guide.md
+  Chars: 13430, Tokens: 3357
+  Entities: 9, Relationships: 7
+thealliance.ai__blog__ai-alliance-accelerating-open-source-ai-innovation.md
+  Chars: 11458, Tokens: 2864
+  Entities: 11, Relationships: 6
+thealliance.ai__blog__ai-alliance-comment-in-response-to-japan-fair-trade-commission-discussion-paper-on-generative-ai-and-competition.md
+  Chars: 6002, Tokens: 1500
+  Entities: 7, Relationships: 3
+thealliance.ai__blog__ai-alliance-comment-in-response-to-the-rfi-on-the-development-of-an-ai-action-plan.md
+  Chars: 6092, Tokens: 1523
+  Entities: 6, Relationships: 3
+thealliance.ai__blog__ai-alliance-expands-with-seven-new-members-from-in.md
+  Chars: 14959, Tokens: 3739
+  Entities: 10, Relationships: 3
+thealliance.ai__blog__ai-alliance-skills-and-education-working-group-intro.md
+  Chars: 11634, Tokens: 2908
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__ai-alliance-urges-lawmakers-to-rethink-the-ny-raise-act.md
+  Chars: 7627, Tokens: 1906
+  Entities: 6, Relationships: 3
+thealliance.ai__blog__ai-for-drug-discovery-open-innovation-forum.md
+  Chars: 7953, Tokens: 1988
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__alliance_launch.md
+  Chars: 38704, Tokens: 9676
+  Entities: 9, Relationships: 7
+thealliance.ai__blog__architecture-of-data-prep-kit-framework.md
+  Chars: 34083, Tokens: 8520
+  Entities: 10, Relationships: 6
+thealliance.ai__blog__defining-open-source-ai-the-road-ahead.md
+  Chars: 14084, Tokens: 3521
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__dept-commerce-ntia-report-on-open-weights-models.md
+  Chars: 9618, Tokens: 2404
+  Entities: 8, Relationships: 3
+thealliance.ai__blog__doomarena-a-security-testing-framework-for-ai-agen.md
+  Chars: 16083, Tokens: 4020
+  Entities: 8, Relationships: 6
+thealliance.ai__blog__evaluation-of-generative-ai---whats-ultimately-our.md
+  Chars: 22386, Tokens: 5596
+  Entities: 11, Relationships: 7
+thealliance.ai__blog__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md
+  Chars: 5942, Tokens: 1485
+  Entities: 7, Relationships: 3
+thealliance.ai__blog__from-layout-to-logic-how-docling-is-redefining-doc.md
+  Chars: 14549, Tokens: 3637
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__getting-started-with-ai-trust-and-safety.md
+  Chars: 9977, Tokens: 2494
+  Entities: 10, Relationships: 6
+thealliance.ai__blog__ictp-announces-ai-prize-for-science-an-ai-alliance.md
+  Chars: 12510, Tokens: 3127
+  Entities: 8, Relationships: 6
+thealliance.ai__blog__introducing-the-ai-alliance-open-innovation-principles.md
+  Chars: 7601, Tokens: 1900
+  Entities: 8, Relationships: 8
+thealliance.ai__blog__llm-as-a-judge-without-the-headaches-evalassist-br.md
+  Chars: 12360, Tokens: 3090
+  Entities: 9, Relationships: 3
+thealliance.ai__blog__mastering-data-cleaning-for-fine-tuning-llms-and-r.md
+  Chars: 18117, Tokens: 4529
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__navigating-the-ai-risk-labyrinth.md
+  Chars: 12996, Tokens: 3249
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__open-source-ai-demo-night-sf-2024.md
+  Chars: 10266, Tokens: 2566
+  Entities: 10, Relationships: 6
+thealliance.ai__blog__open-trusted-wikimedia-datasets-by-wikimedia-enter.md
+  Chars: 11498, Tokens: 2874
+  Entities: 9, Relationships: 6
+thealliance.ai__blog__our-first-year.md
+  Chars: 27868, Tokens: 6967
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__pleias-releases-common-corpus-open-multilingual-dataset-for-llm-training.md
+  Chars: 18477, Tokens: 4619
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__public-statement-on-possible-veto-of-sb-1047.md
+  Chars: 8423, Tokens: 2105
+  Entities: 7, Relationships: 3
+thealliance.ai__blog__spotlight-on-raphael-vienne.md
+  Chars: 8988, Tokens: 2247
+  Entities: 8, Relationships: 7
+thealliance.ai__blog__spotlight-on-sean-hughes.md
+  Chars: 10425, Tokens: 2606
+  Entities: 8, Relationships: 6
+thealliance.ai__blog__spotlight-on-supratick-mukhopadhyay.md
+  Chars: 14596, Tokens: 3649
+  Entities: 8, Relationships: 6
+thealliance.ai__blog__the-ai-alliance-comment-on-nist-ai-800-1-initial-public-draft.md
+  Chars: 6202, Tokens: 1550
+  Entities: 6, Relationships: 3
+thealliance.ai__blog__the-ai-alliance-forms-non-profit-ai-lab-and-ai-tec.md
+  Chars: 10415, Tokens: 2603
+  Entities: 10, Relationships: 8
+thealliance.ai__blog__the-ai-alliance-releases-new-ai-powered-programmin.md
+  Chars: 10979, Tokens: 2744
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__the-state-of-open-source-trust.md
+  Chars: 25800, Tokens: 6450
+  Entities: 10, Relationships: 7
+thealliance.ai__blog__transform-pipelines-in-data-prep-kit.md
+  Chars: 18789, Tokens: 4697
+  Entities: 11, Relationships: 7
+thealliance.ai__community.md
+  Chars: 6006, Tokens: 1501
+  Entities: 14, Relationships: 7
+thealliance.ai__contact.md
+  Chars: 4811, Tokens: 1202
+  Entities: 10, Relationships: 7
+thealliance.ai__contribute.md
+  Chars: 7091, Tokens: 1772
+  Entities: 9, Relationships: 6
+thealliance.ai__core-projects.md
+  Chars: 11191, Tokens: 2797
+  Entities: 10, Relationships: 7
+thealliance.ai__core-projects__ai-accelerator-software-ecosystem-guide.md
+  Chars: 5862, Tokens: 1465
+  Entities: 10, Relationships: 7
+thealliance.ai__core-projects__guide-to-essential-competencies-for-ai.md
+  Chars: 7034, Tokens: 1758
+  Entities: 7, Relationships: 3
+thealliance.ai__core-projects__industry-open-fms-initiative.md
+  Chars: 5888, Tokens: 1472
+  Entities: 8, Relationships: 6
+thealliance.ai__core-projects__ntia_request.md
+  Chars: 5194, Tokens: 1298
+  Entities: 7, Relationships: 6
+thealliance.ai__core-projects__open-trusted-data-initiative.md
+  Chars: 6114, Tokens: 1528
+  Entities: 7, Relationships: 3
+thealliance.ai__core-projects__safety-priorities-ranking-by-domain.md
+  Chars: 5711, Tokens: 1427
+  Entities: 8, Relationships: 3
+thealliance.ai__core-projects__sb1047.md
+  Chars: 11568, Tokens: 2892
+  Entities: 9, Relationships: 7
+thealliance.ai__core-projects__the-living-guide-to-applying-ai.md
+  Chars: 5995, Tokens: 1498
+  Entities: 7, Relationships: 6
+thealliance.ai__core-projects__time-series-data-and-model-initiative.md
+  Chars: 6377, Tokens: 1594
+  Entities: 9, Relationships: 7
+thealliance.ai__core-projects__trust-and-safety-evaluations.md
+  Chars: 5131, Tokens: 1282
+  Entities: 9, Relationships: 5
+thealliance.ai__core-projects__trust-user-guide.md
+  Chars: 5520, Tokens: 1380
+  Entities: 8, Relationships: 5
+thealliance.ai__core-projects__trusted-evals.md
+  Chars: 9290, Tokens: 2322
+  Entities: 8, Relationships: 3
+thealliance.ai__docs__AI_Alliance_Association_Statement_in_Opposition_to_NY_RAISE_Act.md
+  Chars: 5689, Tokens: 1422
+  Entities: 8, Relationships: 7
+thealliance.ai__docs__feedback-on-the-draft-report-by-joint-california-policy-working-group-on-ai-frontier-models.md
+  Chars: 8244, Tokens: 2061
+  Entities: 11, Relationships: 6
+thealliance.ai__docs__guide-to-essential-competencies-for-ai.md
+  Chars: 112385, Tokens: 28096
+  Entities: 16, Relationships: 7
+thealliance.ai__events.md
+  Chars: 8017, Tokens: 2004
+  Entities: 10, Relationships: 7
+thealliance.ai__focus-areas__advocacy.md
+  Chars: 6700, Tokens: 1675
+  Entities: 7, Relationships: 5
+thealliance.ai__focus-areas__applications-and-tools.md
+  Chars: 5424, Tokens: 1356
+  Entities: 7, Relationships: 3
+thealliance.ai__focus-areas__foundation-models-datasets.md
+  Chars: 8327, Tokens: 2081
+  Entities: 9, Relationships: 7
+thealliance.ai__focus-areas__hardware-enablement.md
+  Chars: 5197, Tokens: 1299
+  Entities: 10, Relationships: 7
+thealliance.ai__focus-areas__skills-education.md
+  Chars: 4841, Tokens: 1210
+  Entities: 10, Relationships: 7
+thealliance.ai__focus-areas__trust-and-safety.md
+  Chars: 7740, Tokens: 1935
+  Entities: 7, Relationships: 6
+thealliance.ai__governance.md
+  Chars: 21658, Tokens: 5414
+  Entities: 13, Relationships: 7
+thealliance.ai__index.md
+  Chars: 25770, Tokens: 6442
+  Entities: 10, Relationships: 3
+thealliance.ai__leadership.md
+  Chars: 13235, Tokens: 3308
+  Entities: 10, Relationships: 7
+thealliance.ai__membership.md
+  Chars: 5626, Tokens: 1406
+  Entities: 10, Relationships: 7
+thealliance.ai__our-work.md
+  Chars: 14032, Tokens: 3508
+  Entities: 10, Relationships: 7
+thealliance.ai__working-groups__advocacy.md
+  Chars: 7842, Tokens: 1960
+  Entities: 10, Relationships: 7
+thealliance.ai__working-groups__ai-for-drug-discovery.md
+  Chars: 8208, Tokens: 2052
+  Entities: 10, Relationships: 7
+thealliance.ai__working-groups__applications-and-tools.md
+  Chars: 5564, Tokens: 1391
+  Entities: 8, Relationships: 7
+thealliance.ai__working-groups__climate-and-sustainability.md
+  Chars: 8771, Tokens: 2192
+  Entities: 10, Relationships: 7
+thealliance.ai__working-groups__foundation-models.md
+  Chars: 5605, Tokens: 1401
+  Entities: 8, Relationships: 3
+thealliance.ai__working-groups__hardware-enablement.md
+  Chars: 5546, Tokens: 1386
+  Entities: 8, Relationships: 5
+thealliance.ai__working-groups__materials-and-chemistry.md
+  Chars: 11860, Tokens: 2965
+  Entities: 10, Relationships: 7
+thealliance.ai__working-groups__skills--education.md
+  Chars: 5939, Tokens: 1484
+  Entities: 9, Relationships: 6
+
