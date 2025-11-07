@@ -1,0 +1,51 @@
+# Core document processing
+docling
+html2text
+
+# Asyncio support
+nest_asyncio
+
+# PyTorch CPU-only (much smaller than GPU)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu
+
+# JSON parsing
+orjson>=3.8.0
+json-repair>=0.7.0
+
+# Vector DB - Local Milvus Lite
+pymilvus==2.5.5
+milvus-lite==2.4.11
+
+# LLM Integration
+litellm
+
+# LlamaIndex (Local with Ollama)
+llama-index
+llama-index-embeddings-huggingface
+llama-index-llms-litellm
+llama-index-llms-ollama
+llama-index-vector-stores-milvus==0.5.0
+
+# Graph Database
+neo4j
+networkx
+python-louvain
+igraph
+leidenalg
+graspologic
+
+# Graph LLM APIs
+google-generativeai
+openai>=1.0.0
+fastmcp
+
+# Web Frameworks
+flask==2.3.3
+chainlit
+
+# Utilities
+python-dotenv
+humanfriendly
+pandas
+tqdm

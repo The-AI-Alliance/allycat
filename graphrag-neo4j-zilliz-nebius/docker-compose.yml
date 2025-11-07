@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  allycat-cloud:
+    image: allycat-graphrag:cloud
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: allycat-cloud
+    ports:
+      - "8080:8080"
+    environment:
+      - LLM_RUN_ENV=cloud
+      - VECTOR_DB_TYPE=cloud_zilliz
+      - APP_TYPE=flask_graph
+      - AUTO_RUN_PIPELINE=false
+    env_file:
+      - .env
+    command: ["deploy"]
+    restart: unless-stopped

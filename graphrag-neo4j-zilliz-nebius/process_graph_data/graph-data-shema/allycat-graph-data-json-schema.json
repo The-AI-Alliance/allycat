@@ -1,0 +1,581 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AllyCAT GraphRAG Data Schema - Phase 4 Output",
+  "description": "Complete schema matching actual Phase 4 output structure with all properties from phases 1-4",
+  "type": "object",
+  "required": [
+    "nodes",
+    "relationships",
+    "communities",
+    "community_reports",
+    "metadata",
+    "drift_search_metadata"
+  ],
+  "properties": {
+    "nodes": {
+      "type": "array",
+      "description": "Graph entities with embeddings and quality scores",
+      "items": {
+        "$ref": "#/definitions/Node"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "description": "Graph relationships",
+      "items": {
+        "$ref": "#/definitions/Relationship"
+      }
+    },
+    "communities": {
+      "$ref": "#/definitions/Communities"
+    },
+    "community_reports": {
+      "type": "array",
+      "description": "LLM-generated community reports",
+      "items": {
+        "$ref": "#/definitions/CommunityReport"
+      }
+    },
+    "metadata": {
+      "$ref": "#/definitions/Metadata"
+    },
+    "drift_search_metadata": {
+      "$ref": "#/definitions/DriftSearchMetadata"
+    }
+  },
+  "definitions": {
+    "Node": {
+      "type": "object",
+      "required": [
+        "id",
+        "labels",
+        "properties"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "UUID identifier"
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Entity type labels"
+        },
+        "properties": {
+          "$ref": "#/definitions/NodeProperties"
+        }
+      }
+    },
+    "NodeProperties": {
+      "type": "object",
+      "required": [
+        "title",
+        "content"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "semantic_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "created_date": {
+          "type": "string"
+        },
+        "extraction_method": {
+          "type": "string"
+        },
+        "community_id": {
+          "type": "integer"
+        },
+        "degree": {
+          "type": "integer"
+        },
+        "degree_centrality": {
+          "type": "number"
+        },
+        "betweenness_centrality": {
+          "type": "number"
+        },
+        "closeness_centrality": {
+          "type": "number"
+        },
+        "eigenvector_centrality": {
+          "type": "number"
+        },
+        "clustering_coefficient": {
+          "type": "number"
+        },
+        "community_membership_strength": {
+          "type": "number"
+        },
+        "bridge_score": {
+          "type": "number"
+        },
+        "entity_importance_rank": {
+          "type": "number"
+        },
+        "embedding_vector": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "embedding_model_version": {
+          "type": "string"
+        },
+        "data_quality_score": {
+          "type": "number"
+        }
+      }
+    },
+    "Relationship": {
+      "type": "object",
+      "required": [
+        "id",
+        "startNode",
+        "endNode",
+        "type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "startNode": {
+          "type": "string"
+        },
+        "endNode": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number"
+        },
+        "weight": {
+          "type": "number"
+        },
+        "source_file": {
+          "type": "string"
+        }
+      }
+    },
+    "Communities": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "total_communities"
+      ],
+      "properties": {
+        "algorithm": {
+          "type": "string"
+        },
+        "total_communities": {
+          "type": "integer"
+        },
+        "modularity_score": {
+          "type": "number"
+        },
+        "hierarchical": {
+          "type": "boolean"
+        },
+        "levels": {
+          "type": "integer"
+        },
+        "summaries": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "statistics": {
+          "type": "object",
+          "properties": {
+            "total_communities": {
+              "type": "integer"
+            },
+            "min_size": {
+              "type": "integer"
+            },
+            "max_size": {
+              "type": "integer"
+            },
+            "avg_size": {
+              "type": "number"
+            },
+            "median_size": {
+              "type": "number"
+            },
+            "max_level": {
+              "type": "integer"
+            },
+            "root_communities": {
+              "type": "integer"
+            },
+            "leaf_communities": {
+              "type": "integer"
+            }
+          }
+        },
+        "hierarchy": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/HierarchyItem"
+          }
+        }
+      }
+    },
+    "HierarchyItem": {
+      "type": "object",
+      "properties": {
+        "community": {
+          "type": "integer"
+        },
+        "community_human_readable_id": {
+          "type": "string"
+        },
+        "parent": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "level": {
+          "type": "integer"
+        },
+        "community_title": {
+          "type": "string"
+        },
+        "entity_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "relationship_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "period": {
+          "type": "string"
+        },
+        "size": {
+          "type": "integer"
+        },
+        "internal_relationships": {
+          "type": "integer"
+        },
+        "external_relationships": {
+          "type": "integer"
+        },
+        "density": {
+          "type": "number"
+        },
+        "avg_degree": {
+          "type": "number"
+        },
+        "conductance": {
+          "type": "number"
+        },
+        "analytics": {
+          "type": "object",
+          "properties": {
+            "entity_type_distribution": {
+              "type": "object"
+            },
+            "semantic_tag_distribution": {
+              "type": "object"
+            },
+            "dominant_theme": {
+              "type": "string"
+            },
+            "diversity_score": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "CommunityReport": {
+      "type": "object",
+      "properties": {
+        "community": {
+          "type": "integer"
+        },
+        "parent": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "level": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "full_content": {
+          "type": "string"
+        },
+        "rank": {
+          "type": "number"
+        },
+        "rank_explanation": {
+          "type": "string"
+        },
+        "rating_explanation": {
+          "type": "string"
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "summary": {
+                "type": "string"
+              },
+              "explanation": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "full_content_json": {
+          "type": "object"
+        },
+        "period": {
+          "type": "string"
+        },
+        "size": {
+          "type": "integer"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "report_embedding": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "key_entities_ranked": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "degree_centrality": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "key_relationships_ranked": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "type": "string"
+              },
+              "target": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "llm_model": {
+          "type": "string"
+        },
+        "generation_confidence": {
+          "type": "number"
+        },
+        "token_count": {
+          "type": "integer"
+        },
+        "created_date": {
+          "type": "string"
+        }
+      }
+    },
+    "Metadata": {
+      "type": "object",
+      "required": [
+        "phase",
+        "generated_at"
+      ],
+      "properties": {
+        "phase": {
+          "type": "string"
+        },
+        "total_reports": {
+          "type": "integer"
+        },
+        "llm_model": {
+          "type": "string"
+        },
+        "llm_provider": {
+          "type": "string"
+        },
+        "created_date": {
+          "type": "string"
+        },
+        "embedding_model": {
+          "type": "string"
+        },
+        "embedding_dimensions": {
+          "type": "integer"
+        },
+        "generated_at": {
+          "type": "string"
+        }
+      }
+    },
+    "DriftSearchMetadata": {
+      "type": "object",
+      "properties": {
+        "configuration": {
+          "type": "object"
+        },
+        "query_routing_config": {
+          "type": "object"
+        },
+        "community_search_index": {
+          "type": "object"
+        },
+        "entity_search_index": {
+          "type": "object"
+        },
+        "relationship_search_index": {
+          "type": "object"
+        },
+        "vector_index_config": {
+          "type": "object"
+        },
+        "fulltext_index_config": {
+          "type": "object"
+        },
+        "composite_index_config": {
+          "type": "object"
+        },
+        "range_index_config": {
+          "type": "object"
+        },
+        "centrality_index_config": {
+          "type": "object"
+        },
+        "semantic_embedding_index": {
+          "type": "object",
+          "properties": {
+            "entity_embeddings": {
+              "type": "object"
+            },
+            "community_report_embeddings": {
+              "type": "object"
+            },
+            "embedding_model": {
+              "type": "string"
+            },
+            "embedding_dimensions": {
+              "type": "integer"
+            },
+            "similarity_metric": {
+              "type": "string"
+            }
+          }
+        },
+        "graph_topology_index": {
+          "type": "object",
+          "properties": {
+            "node_count": {
+              "type": "integer"
+            },
+            "relationship_count": {
+              "type": "integer"
+            },
+            "avg_degree": {
+              "type": "number"
+            },
+            "graph_density": {
+              "type": "number"
+            }
+          }
+        },
+        "search_optimization": {
+          "type": "object",
+          "properties": {
+            "total_entities": {
+              "type": "integer"
+            },
+            "total_relationships": {
+              "type": "integer"
+            },
+            "total_communities": {
+              "type": "integer"
+            },
+            "avg_community_size": {
+              "type": "number"
+            },
+            "graph_modularity": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  }
+}
