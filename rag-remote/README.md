@@ -169,7 +169,16 @@ Go to url : http://localhost:8090  and start chatting!
 
 ---
 
-## Packaging the app to deploy
+## Step-9: Let's turn Allycat RAG into an MCP server!
+
+[MCP server code](mcp_server.py) <br>
+[MCP client code](mcp_client.py)
+
+See [mcp.md](mcp.md) for more.
+
+---
+
+## Step-10: Packaging the app to deploy
 
 We will create a docker image of the app.  It will package up the code + data
 
@@ -179,7 +188,7 @@ Note:  Be sure to run the docker command from the root of the project.
 docker  build    -t allycat-remote  .
 ```
 
-## Run the AllyCat Docker
+## Step-11: Run the AllyCat Docker
 
 Let's start the docker in 'dev' mode
 

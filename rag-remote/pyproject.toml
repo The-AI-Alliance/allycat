@@ -14,6 +14,7 @@ dependencies = [
     "llama-index-embeddings-litellm>=0.3.0",
     "llama-index-llms-litellm>=0.5.1",
     "llama-index-vector-stores-milvus>=0.8.5",
+    "mcp>=1.3.1",
     "milvus-lite>=2.5.1",
     "mimetypes-magic>=0.4.30",
     "nest-asyncio>=1.6.0",

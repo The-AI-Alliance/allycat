@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.13' and sys_platform == 'darwin'",
@@ -170,6 +170,7 @@ dependencies = [
     { name = "llama-index-embeddings-litellm" },
     { name = "llama-index-llms-litellm" },
     { name = "llama-index-vector-stores-milvus" },
+    { name = "mcp" },
     { name = "milvus-lite" },
     { name = "mimetypes-magic" },
     { name = "nest-asyncio" },
@@ -194,6 +195,7 @@ requires-dist = [
     { name = "llama-index-embeddings-litellm", specifier = ">=0.3.0" },
     { name = "llama-index-llms-litellm", specifier = ">=0.5.1" },
     { name = "llama-index-vector-stores-milvus", specifier = ">=0.8.5" },
+    { name = "mcp", specifier = ">=1.3.1" },
     { name = "milvus-lite", specifier = ">=2.5.1" },
     { name = "mimetypes-magic", specifier = ">=0.4.30" },
     { name = "nest-asyncio", specifier = ">=1.6.0" },
