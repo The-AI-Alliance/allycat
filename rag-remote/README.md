@@ -95,8 +95,13 @@ code: [1_crawl_site.py](1_crawl_site.py)
 ```bash
 # default settings
 python     1_crawl_site.py  --url https://thealliance.ai
+
+## if using uv
+# uv run python     1_crawl_site.py  --url https://thealliance.ai
+
 # or specify parameters
 python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --depth 5
+# uv run python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --depth 5
 ```
 
 ## Step-5: Process Downloaded files
@@ -110,6 +115,7 @@ We use [Docling](https://github.com/docling-project/docling) to process download
 
 ```bash
 python   2_process_files.py
+# uv run python   2_process_files.py
 ```
 
 ---

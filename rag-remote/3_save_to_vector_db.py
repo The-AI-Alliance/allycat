@@ -40,6 +40,7 @@ os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
 Settings.embed_model = LiteLLMEmbedding(
         model_name=MY_CONFIG.EMBEDDING_MODEL,
+        embed_batch_size=50,  # Batch size for embedding (default is 10)
     )
 
 # Step-4: Connect to Milvus
