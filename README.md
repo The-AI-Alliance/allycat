@@ -43,6 +43,7 @@ You can run allycat in following settings:
 | Setup                                              | Stack                             | Description                                   |
 |----------------------------------------------------|-----------------------------------|-----------------------------------------------|
 | [RAG (local) 1](rag-local-milvus-ollama/README.md) | Milvus (DB) + Ollama (LLMs)       | Everything runs locally.  No API keys needed. |
+| [RAG remote 1](rag-remote/README.md) | Milvus (DB) + models running on the cloud        |  All models are running on cloud.  API keys are required|
 
 
 <!-- 

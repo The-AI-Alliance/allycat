@@ -1,0 +1,31 @@
+[project]
+name = "allycat-1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chainlit>=2.2.1",
+    "docling>=2.41.0",
+    "flask>=3.1.1",
+    "humanfriendly>=10.0",
+    "litellm>=1.74.3",
+    "llama-index>=0.12.48",
+    "llama-index-embeddings-litellm>=0.3.0",
+    "llama-index-llms-litellm>=0.5.1",
+    "llama-index-vector-stores-milvus>=0.8.5",
+    "milvus-lite>=2.5.1",
+    "mimetypes-magic>=0.4.30",
+    "nest-asyncio>=1.6.0",
+    "pandas>=2.3.1",
+    "pymilvus>=2.5.12",
+    "tqdm>=4.67.1",
+]
+
+[tool.setuptools]
+py-modules = []
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
