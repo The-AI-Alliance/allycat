@@ -72,10 +72,10 @@ The default models used will be:
 Find the available models at [Nebius Token Factory](https://tokenfactory.nebius.com/)
 
 ```text
-EMBEDDING_MODEL = Qwen/Qwen3-Embedding-8B
+EMBEDDING_MODEL = nebius/Qwen/Qwen3-Embedding-8B
 EMBEDDING_LENGTH = 384
 
-LLM_MODEL = nebius/Qwen/Qwen3-30B-A3B-Instruct-2507
+LLM_MODEL = 'nebius/Qwen/Qwen3-30B-A3B-Instruct-2507'
 ```
 
 ---
