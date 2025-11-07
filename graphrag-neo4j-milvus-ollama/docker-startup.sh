@@ -136,12 +136,6 @@ case $APP_TYPE in
     "chainlit_graph")
         APP_PORT=$CHAINLIT_GRAPH_PORT
         ;;
-    "flask")
-        APP_PORT=$FLASK_VECTOR_PORT
-        ;;
-    "chainlit")
-        APP_PORT=$CHAINLIT_VECTOR_PORT
-        ;;
     *)
         APP_PORT=$FLASK_GRAPH_PORT
         ;;
@@ -162,14 +156,6 @@ if [ "$1" == "deploy" ]; then
         "chainlit_graph")
             echo "Starting Chainlit GraphRAG app on port $CHAINLIT_GRAPH_PORT..."
             chainlit run app_chainlit_graph.py --host 0.0.0.0 --port $CHAINLIT_GRAPH_PORT
-            ;;
-        "flask")
-            echo "Starting Flask Vector RAG app on port $FLASK_VECTOR_PORT..."
-            python3 app_flask.py
-            ;;
-        "chainlit")
-            echo "Starting Chainlit Vector RAG app on port $CHAINLIT_VECTOR_PORT..."
-            chainlit run app_chainlit.py --host 0.0.0.0 --port $CHAINLIT_VECTOR_PORT
             ;;
         *)
             echo "Starting default Flask GraphRAG app on port $FLASK_GRAPH_PORT..."

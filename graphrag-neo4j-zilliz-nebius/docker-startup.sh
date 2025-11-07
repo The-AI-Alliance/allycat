@@ -82,18 +82,15 @@ fi
 APP_TYPE=${APP_TYPE:-flask_graph}
 DOCKER_APP_PORT=${DOCKER_APP_PORT:-8080}
 FLASK_GRAPH_PORT=${FLASK_GRAPH_PORT:-8080}
-FLASK_VECTOR_PORT=${FLASK_VECTOR_PORT:-8081}
+FLASK_GRAPH_PORT=${FLASK_GRAPH_PORT:-8080}
 CHAINLIT_GRAPH_PORT=${CHAINLIT_GRAPH_PORT:-8083}
-CHAINLIT_VECTOR_PORT=${CHAINLIT_VECTOR_PORT:-8082}
 
 # Log port configuration
 echo ""
 echo "=== Port Configuration ==="
 echo "DOCKER_APP_PORT (internal container): $DOCKER_APP_PORT"
 echo "FLASK_GRAPH_PORT: $FLASK_GRAPH_PORT"
-echo "FLASK_VECTOR_PORT: $FLASK_VECTOR_PORT"
 echo "CHAINLIT_GRAPH_PORT: $CHAINLIT_GRAPH_PORT"
-echo "CHAINLIT_VECTOR_PORT: $CHAINLIT_VECTOR_PORT"
 echo ""
 
 # Determine which port will be used based on APP_TYPE
@@ -103,12 +100,6 @@ case $APP_TYPE in
         ;;
     "chainlit_graph")
         APP_PORT=$CHAINLIT_GRAPH_PORT
-        ;;
-    "flask")
-        APP_PORT=$FLASK_VECTOR_PORT
-        ;;
-    "chainlit")
-        APP_PORT=$CHAINLIT_VECTOR_PORT
         ;;
     *)
         APP_PORT=$FLASK_GRAPH_PORT
@@ -131,14 +122,6 @@ if [ "$1" == "deploy" ]; then
             echo "Starting Chainlit GraphRAG app on port $CHAINLIT_GRAPH_PORT..."
             chainlit run app_chainlit_graph.py --host 0.0.0.0 --port $CHAINLIT_GRAPH_PORT
             ;;
-        "flask")
-            echo "Starting Flask Vector RAG app on port $FLASK_VECTOR_PORT..."
-            python3 app_flask.py
-            ;;
-        "chainlit")
-            echo "Starting Chainlit Vector RAG app on port $CHAINLIT_VECTOR_PORT..."
-            chainlit run app_chainlit.py --host 0.0.0.0 --port $CHAINLIT_VECTOR_PORT
-            ;;
         *)
             echo "Starting default Flask GraphRAG app on port $FLASK_GRAPH_PORT..."
             python3 app_flask_graph.py
@@ -149,9 +132,7 @@ else
     echo ""
     echo "Available commands:"
     echo "  python3 app_flask_graph.py       - Start Flask GraphRAG app"
-    echo "  python3 app_flask.py             - Start Flask VectorRAG app"
     echo "  chainlit run app_chainlit_graph.py - Start Chainlit GraphRAG app"
-    echo "  chainlit run app_chainlit.py     - Start Chainlit VectorRAG app"
     
     if [ "$LLM_MODE" = "local_ollama" ]; then
         echo "  ollama pull $ollama_model        - Download Ollama model"
