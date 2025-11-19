@@ -53,7 +53,8 @@ MY_CONFIG.COLLECTION_NAME = 'pages'
 
 
 
-MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'nebius/Qwen/Qwen3-30B-A3B-Instruct-2507')
+# MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'nebius/Qwen/Qwen3-30B-A3B-Instruct-2507')
+MY_CONFIG.LLM_MODEL = os.getenv("LLM_MODEL", 'nebius/openai/gpt-oss-120b')
 
 
 ## --- UI settings ---

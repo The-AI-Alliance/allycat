@@ -32,7 +32,7 @@ Follow the [Setup](setup.md) guide.
 
 ```bash
 ## if using uv
-source .venv/bin/activate
+#source .venv/bin/activate
 
 ## if using python venv
 source  .venv/bin/activate
@@ -94,14 +94,16 @@ code: [1_crawl_site.py](1_crawl_site.py)
 
 ```bash
 # default settings
+## if using uv
+uv run python     1_crawl_site.py  --url https://thealliance.ai
+# or
 python     1_crawl_site.py  --url https://thealliance.ai
 
-## if using uv
-# uv run python     1_crawl_site.py  --url https://thealliance.ai
 
 # or specify parameters
+uv run python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --depth 5
+# or
 python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --depth 5
-# uv run python  1_crawl_site.py   --url https://thealliance.ai --max-downloads 100 --depth 5
 ```
 
 ## Step-5: Process Downloaded files
@@ -114,6 +116,8 @@ We use [Docling](https://github.com/docling-project/docling) to process download
 - or (For debugging) Run notebook :  [2_process_files.ipynb](2_process_files.ipynb)  
 
 ```bash
+uv run python   2_process_files.py
+# or 
 python   2_process_files.py
 # uv run python   2_process_files.py
 ```
@@ -135,6 +139,8 @@ We currently use [Milvus](https://milvus.io/) as the vector database.  We use th
 - or (For debugging) Run the notebook [3_save_to_vector_db.ipynb](3_save_to_vector_db.ipynb)  
 
 ```bash
+uv run python   3_save_to_vector_db.py
+# or
 python   3_save_to_vector_db.py
 ```
 
@@ -146,6 +152,8 @@ python   3_save_to_vector_db.py
 - or (for debug) using notebook [4_query.ipynb](4_query.ipynb)
 
 ```bash
+uv run python  4_query.py
+# or
 python  4_query.py
 ```
 
@@ -162,6 +170,8 @@ Go to url : http://localhost:8080  and start chatting!
 **Option 2: Chainlit UI**
 
 ```bash
+uv run chainlit run app_chainlit.py --port 8090
+# or
 chainlit run app_chainlit.py --port 8090
 ```
 
