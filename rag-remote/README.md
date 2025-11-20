@@ -41,7 +41,6 @@ pip install -r requirements.txt
 ## If using conda
 conda  activate  allycat-1  # what ever the name of the env
 pip install -r requirements.txt
-
 ```
 
 ---

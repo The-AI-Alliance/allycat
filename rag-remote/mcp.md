@@ -16,11 +16,11 @@ The `mcp_server.py` file implements an MCP server that allows querying the RAG (
    uv sync
    ```
 
-   Or if you need to install the MCP package specifically:
+   <!-- Or if you need to install the MCP package specifically:
 
    ```bash
    uv add mcp
-   ```
+   ``` -->
 
 2. **Prepare the RAG System**
 
@@ -31,9 +31,11 @@ The `mcp_server.py` file implements an MCP server that allows querying the RAG (
 
 3. **Activate Python Environment**
 
-   ```bash
-   source .venv/bin/activate
-   ```
+
+```bash
+#  if not using uv 
+source .venv/bin/activate
+```
 
 ## Testing the MCP Server
 
@@ -43,11 +45,13 @@ The `mcp_client.py` client provides an easy way to test the MCP server from the 
 
 1. **Interactive Mode** (recommended for testing):
 
-   ```bash
-   python mcp_client.py
-   ```
+```bash
+uv run python mcp_client.py
+# or 
+python mcp_client.py
+```
 
-   This will:
+This will:
    - Start the MCP server automatically
    - List available tools
    - Start an interactive prompt where you can enter queries
@@ -92,9 +96,11 @@ The `mcp_client.py` client provides an easy way to test the MCP server from the 
 
 2. **Single Query Mode** (useful for scripting):
 
-   ```bash
-   python mcp_client.py "What is AI Alliance?"
-   ```
+```bash
+uv run python mcp_client.py "What is AI Alliance?"
+# or 
+python mcp_client.py "What is AI Alliance?"
+```
 
    This will execute a single query and display the result, then exit. Useful for:
    - Testing from shell scripts
@@ -119,6 +125,8 @@ The MCP Inspector provides a web-based interface for testing MCP servers.
    **Option B: Use npx** (no installation needed):
    ```bash
    # npx will download and run it automatically
+   npx @modelcontextprotocol/inspector uv run python mcp_server.py
+   # or 
    npx @modelcontextprotocol/inspector python mcp_server.py
    ```
 
@@ -126,11 +134,15 @@ The MCP Inspector provides a web-based interface for testing MCP servers.
 
    If installed globally:
    ```bash
+   mcp-inspector uv run python mcp_server.py
+   # or
    mcp-inspector python mcp_server.py
    ```
 
    Or with npx (one-time use):
    ```bash
+   npx @modelcontextprotocol/inspector uv run python mcp_server.py
+   # or 
    npx @modelcontextprotocol/inspector python mcp_server.py
    ```
 
