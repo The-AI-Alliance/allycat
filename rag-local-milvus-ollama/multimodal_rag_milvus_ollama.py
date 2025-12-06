@@ -49,7 +49,7 @@ COLLECTION_NAME = "vision_rag_collection"
 EMBED_MODEL_NAME = "all-MiniLM-L6-v2"  # sentence-transformers
 EMBED_DIM = 384  # all-MiniLM-L6-v2 default dim
 
-IMAGE_PATH = "rose_slug.jpg"  # change to your image path
+IMAGE_PATH = "septoria-spot-tomato-plant.jpg"  # change to your image path
 
 # -----------------------
 # Initialize services
@@ -226,7 +226,7 @@ def generate_with_ollama(retrieved_texts: List[str], user_query: str, ollama_mod
 # -----------------------
 def main():
     prompt_text = (
-        "The plant has multiple leaves that have white oblong spots of varying sizes. "
+        "The plant has multiple leaves that have brown spots of differing sizes and some holes in the leaves. "
         "Identify the plant and its illness. Tell me how to treat it."
     )
 
