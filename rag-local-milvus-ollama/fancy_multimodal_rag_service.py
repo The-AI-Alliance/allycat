@@ -87,28 +87,6 @@ DEFAULT_TOP_K = int(os.environ.get("DEFAULT_TOP_K", "5"))
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("VisionRAG")
 
-def clean_spacing(text: str) -> str:
-    """
-    Fixes extra spaces in text caused by model output.
-    - Collapses multiple spaces into one.
-    - Removes spaces inside words that were split (like 'se pt oria' -> 'septoria').
-    - Keeps punctuation spacing correct.
-    """
-    # First, collapse multiple spaces
-    text = re.sub(r'\s+', ' ', text)
-
-    # Fix spaces inside words split by letters but ignore punctuation
-    # e.g., "se pt oria" -> "septoria"
-    def fix_word_spacing(match):
-        return match.group(0).replace(" ", "")
-
-    # Match sequences of letters separated by single spaces
-    text = re.sub(r'\b(?:[a-zA-Z]\s)+[a-zA-Z]\b', fix_word_spacing, text)
-
-    return text.strip()
-
-
-
 # -----------------------
 # Helpers / small utils
 # -----------------------
@@ -217,13 +195,14 @@ class VisionRAGService:
         with io.BytesIO(image_bytes) as f:
             f.seek(0)
             output = rep.run("ibm-granite/granite-vision-3.3-2b", input={"image": f, "prompt": prompt_text})
+            print(f'granite output = {output}')
 
         # Extract text from output
         text = ""
         if isinstance(output, str):
             text = output
         elif isinstance(output, list):
-            text = " ".join(map(str, output))
+            text = "".join(map(str, output))
         elif isinstance(output, dict):
             for key in ("text", "output", "caption", "analysis", "description", "result"):
                 if key in output:
@@ -236,8 +215,8 @@ class VisionRAGService:
             else:
                 text = json.dumps(output)
 
-        # Clean spacing
-        return clean_spacing(text)
+        print(f'granite text = {text}')
+        return text
 
 
     # ---- Step 2: chunk and embed text
@@ -395,6 +374,7 @@ class VisionRAGService:
         t0 = time.time()
         # 1) analyze image
         analysis_text = self.analyze_image_with_granite(image_bytes, initial_prompt_text)
+        print(f'analysis text = {analysis_text}')
 
         # 2) chunk & embed
         chunks, embeddings, metadatas = self.chunk_and_embed(analysis_text, source=source_label)
