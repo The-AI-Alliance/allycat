@@ -25,7 +25,7 @@ flowchart TD
     A[Image Upload / URL] --> B[Granite Vision: Image → Text]
     B --> C[Chunk & Embed Text]
     C --> D[Milvus Vector Store: Index & Search]
-    D --> E[LLM (Ollama) Answer Generation]
+    D --> E[LLM Ollama Answer Generation]
     E --> F[Agentic Refinement Loop]
     F --> G[JSON Response / Web UI]
 ```
