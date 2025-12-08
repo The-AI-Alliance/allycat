@@ -61,10 +61,10 @@ flowchart TD
 pip install -r requirements.txt
 
 # Start Milvus vector database
-docker-compose up -d
+docker compose up -d
 
 # Pull Ollama model
-ollama pull gemma3:1
+ollama pull gemma3:1b
 
 # Run the FastAPI UI
 uvicorn vision+text_rag_model:app
