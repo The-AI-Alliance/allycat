@@ -15,8 +15,6 @@ Key features:
 
 ## Architecture
 
-## Architecture
-
 ![Multimodal Vision + Text RAG Architecture](vision+text_pipeline_diagram.png)
 
 
