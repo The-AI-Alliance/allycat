@@ -1,3 +1,53 @@
+# -------------------
+# Python
+# -------------------
 .env
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+
+# -------------------
+# Docker
+# -------------------
+
+# Ignore Docker volumes and persistent data
 volumes/etcd/member/
 /volumes/
+
+# Ignore Docker secrets
+secrets/
+
+# Ignore Docker PID and socket files
+*.pid
+*.sock
+
+# Ignore Docker machine and config files
+.docker/
+docker-compose.override.yml
+
+# --------------------
+# Logs and temp
+# --------------------
+*.log
+*.tmp
+*.swp
+
+# --------------------
+# Node.js (if applicable)
+# --------------------
+node_modules/
+
+# --------------------
+# OS / system files
+# --------------------
+.DS_Store
+Thumbs.db
+
+# --------------------
+# IDE / editor files
+# --------------------
+.vscode/
+.idea/
