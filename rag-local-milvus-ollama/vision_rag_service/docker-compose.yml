@@ -61,5 +61,5 @@ services:
       - "minio"
 
 networks:
-  default:
-    name: milvus
+  milvus:
+    external: true

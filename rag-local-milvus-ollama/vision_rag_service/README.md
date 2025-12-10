@@ -67,11 +67,7 @@ ollama pull gemma3:1b
 # Run the FastAPI UI
 uvicorn vision+text_rag_model:app
 
-# Open browser at http://localhost:8000 or use the /analyze endpoint
-curl -X POST "http://localhost:8000/analyze" \
--F "file=@/path/to/image.jpg" \
--F "user_query=Identify plant and disease" \
--F "prompt_text=<Describe the plants appearance here.>"
+# Open browser at http://localhost:8000
 
 # Highlights
 - Enterprise-grade modular design
