@@ -1,23 +1,27 @@
-# Multimodal Vision+Text RAG Service
+# Multimodal Vision + Text RAG Service
 
-## Overview
-This service provides a **full multimodal RAG (Retrieval-Augmented Generation) pipeline** for analyzing images, converting them to text, indexing into a vector database, and generating context-aware answers using an LLM. It’s designed for **plant diagnostics**, but the pipeline is fully generalizable to other vision+text tasks.
+A production-style **multimodal RAG pipeline** that processes images, converts them to text, retrieves relevant context using Milvus, and generates grounded answers using an LLM. Originally built for **plant diagnostics**, but fully generalizable to any Vision + Text system.
 
-Key features:
-- Image-to-text via **Granite Vision** (Replicate)
+---
+
+## Features
+
+- Image-to-text via **Granite Vision** (via Replicate)
 - Chunking and embedding using **SentenceTransformers**
-- Retrieval via **Milvus vector store**
-- Context-aware LLM generation with **Ollama**, including **agentic refinement**
-- FastAPI endpoints for file upload or image URL
-- Structured JSON responses with retrieval trace
+- Vector search using **Milvus**
+- LLM answer generation with **Ollama**
+- FastAPI service with file upload
+- Structured JSON output with retrieval traceability
+- Modular, production-oriented architecture
 
 ---
 
 ## Architecture
 
+### High-Level Diagram
 ![Multimodal Vision + Text RAG Architecture](static/img/vision+text_pipeline_diagram.png)
 
-
+### Detailed Flow
 ```mermaid
 flowchart TD
     A[Image Upload / URL] --> B[Granite Vision: Image → Text]
@@ -28,52 +32,88 @@ flowchart TD
     F --> G[JSON Response / Web UI]
 ```
 
+---
+
 ## Prerequisites
-- WSL: Ubuntu is needed on a Windows OS to use Milvus.
-- Python 3.10+
-- Docker & docker-compose (for Milvus)
-- Replicate API Token
-- .env file containing:
-    * REPLICATE_API_TOKEN=your_token_here
-    * MILVUS_HOST=localhost
-    * MILVUS_PORT=19530
-    * OLLAMA_HOST=http://localhost:11434
-    * OLLAMA_MODEL=gemma3:1b
-    * EMBED_MODEL_NAME=all-MiniLM-L6-v2
+- **WSL: Ubuntu** (required for Milvus on Windows)
+- **Python 3.10+**
+- **Docker & docker-compose**
+- **Replicate API Token**
+- A '.env' file with:
+
+```
+REPLICATE_API_TOKEN=your_token_here
+MILVUS_HOST=localhost
+MILVUS_PORT=19530
+OLLAMA_HOST=http://localhost:11434
+OLLAMA_MODEL=gemma3:1b
+EMBED_MODEL_NAME=all-MiniLM-L6-v2
+```
+
+---
 
 ## Installation
 
-# Setup and activate your environment
+### 1. Create and activate an environment
 
-    ```bash
-    ## if using uv
-    source .venv/bin/activate
+```bash
+# Using uv
+source .venv/bin/activate
 
-    ## if using python venv
-    source  .venv/bin/activate
+## Using python venv
+python3 -m venv .venv
+source  .venv/bin/activate
 
-    ## If using conda
-    conda  activate  allycat-1  # what ever the name of the env
-    ```
-# Install dependancies
+## Using conda
+conda  activate  allycat-1  # what ever the name of the env
+```
+
+### 2. Install dependancies
+```bash
 pip install -r requirements.txt
+```
 
-# Start Milvus vector database
+### 3. Start Milvus
+```
 docker compose up -d
+```
 
-# Pull Ollama model
+### 4. Pull the Ollama model
+```bash
 ollama pull gemma3:1b
+```
 
-# Run the FastAPI UI
+### 5. Run the FastAPI UI
+```bash
 uvicorn vision+text_rag_model:app
+```
 
-# Open browser at http://localhost:8000
+Open your browser:
+http://localhost:8000
 
-# Highlights
-- Enterprise-grade modular design
-- Full RAG pipeline with multimodal input
-- Iterative LLM refinement for more reliable answers
-- Easily extensible to other domains
+---
+
+## Highlights
+- Modular, production-ready design
+- Full multimodal RAG flow (Vision -> Retrieval -> LLM -> Refinement)
+- Includes both API endpoints and web-based interface
+- Easily extensible for any visual domain
+- Developer-friendly structure with clear component boundaries
+
+---
+
+## License
+
+MIT
+
+---
+
+## Future Work
+- Add GPU acceleration support
+- Add batch ingestion for large image datasets
+- Integrate LiteLLM or enterprise gateways
+- Add monitoring & observability hooks
+- Deploy to Kubernetes (Helm chart + manifests)
 
 
 
