@@ -93,6 +93,9 @@ http://localhost:8000
 
 ---
 
+### FastAPI UI Preview
+![FastAPI UI Screenshot](static/img/Plant_diag_service.png)
+
 ## Highlights
 - Modular, production-ready design
 - Full multimodal RAG flow (Vision -> Retrieval -> LLM -> Refinement)
@@ -104,7 +107,7 @@ http://localhost:8000
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](LICENSE) 
 
 ---
 
