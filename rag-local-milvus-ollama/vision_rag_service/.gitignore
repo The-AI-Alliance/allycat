@@ -15,7 +15,7 @@ venv/
 
 # Ignore Docker volumes and persistent data
 volumes/etcd/member/
-/volumes/
+volumes/
 
 # Ignore Docker secrets
 secrets/

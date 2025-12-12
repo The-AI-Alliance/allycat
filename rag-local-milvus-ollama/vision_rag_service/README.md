@@ -15,7 +15,7 @@ Key features:
 
 ## Architecture
 
-![Multimodal Vision + Text RAG Architecture](vision+text_pipeline_diagram.png)
+![Multimodal Vision + Text RAG Architecture](static/img/vision+text_pipeline_diagram.png)
 
 
 ```mermaid
