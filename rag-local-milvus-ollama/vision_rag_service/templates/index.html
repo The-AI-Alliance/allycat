@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Allycat Vision + Text RAG UI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; max-width: 900px; }
+        input, textarea { width: 100%; margin-bottom: 10px; padding: 8px; }
+        button { padding: 10px 20px; margin-bottom: 20px; }
+        pre { background: #f4f4f4; padding: 10px; overflow-x: auto; }
+        img { max-width: 300px; margin-bottom: 10px; border: 1px solid #ccc; padding: 4px; }
+        details { background: #e8f0fe; padding: 6px; margin: 4px 0; border-radius: 4px; }
+        summary { font-weight: bold; cursor: pointer; }
+        h2 { margin-top: 30px; }
+
+        /* Progress Bar */
+        #progress-container {
+            width: 100%;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            height: 20px;
+            display: none;
+        }
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #4caf50;
+            transition: width 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', path='img/logo.png') }}" alt="Allycat Logo" style="max-height: 80px; margin-bottom: 20px;">
+    <h1>Allycat Plant Diagnostic Service</h1>
+
+    {% if init_error %}
+        <p style="color:red;">{{ init_error }}</p>
+    {% endif %}
+
+    <form id="rag-form">
+        <label>Upload Image:</label>
+        <input type="file" id="file" name="file" accept="image/*"><br>
+
+        <img id="image_preview" src="" alt="" style="display:none;"><br>
+
+        <label>User Query:</label>
+        <textarea id="user_query" name="user_query" rows="2">What is wrong with this plant?</textarea><br>
+
+        <label>Prompt Text (optional):</label>
+        <textarea id="prompt_text" name="prompt_text" rows="3">
+<Describe the plant and its appearance here>. Identify the plant and its illness. Tell me how to treat it.
+        </textarea><br>
+
+        <button type="submit">Analyze</button>
+    </form>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <h2>Result:</h2>
+    <div id="result"></div>
+
+    <script>
+        const form = document.getElementById('rag-form');
+        const preview = document.getElementById('image_preview');
+        const progressContainer = document.getElementById('progress-container');
+        const progressBar = document.getElementById('progress-bar');
+
+        const updatePreview = (file) => {
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = e => { preview.src = e.target.result; preview.style.display = 'block'; };
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = '';
+                preview.style.display = 'none';
+            }
+        };
+
+        document.getElementById('file').addEventListener('change', e => updatePreview(e.target.files[0]));
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const fileInput = document.getElementById('file');
+            const user_query = document.getElementById('user_query').value;
+            const prompt_text = document.getElementById('prompt_text').value;
+
+            const formData = new FormData();
+            if (fileInput.files.length > 0) {
+                formData.append('file', fileInput.files[0]);
+            }
+            formData.append('user_query', user_query);
+            formData.append('prompt_text', prompt_text);
+
+            const resultEl = document.getElementById('result');
+            resultEl.innerHTML = '';
+            progressContainer.style.display = 'block';
+            progressBar.style.width = '0%';
+
+            // Animate progress bar
+            let progress = 0;
+            const interval = setInterval(() => {
+                if (progress < 95) progress += Math.random() * 5; // simulate progress
+                progressBar.style.width = progress + '%';
+            }, 200);
+
+            try {
+                const response = await fetch('/analyze', { method: 'POST', body: formData });
+                const data = await response.json();
+                clearInterval(interval);
+                progressBar.style.width = '100%';
+
+                let html = `<h3>Analysis Text:</h3>
+                <pre style="white-space: pre-wrap; word-wrap: break-word;">${data.analysis_text}</pre>`;
+                html += `<h3>Final Answer:</h3>
+                <pre style="white-space: pre-wrap; word-wrap: break-word;">${data.final_answer}</pre>`;
+
+                html += `<h3>Processing Duration (s):</h3><p>${data.duration_seconds.toFixed(2)}</p>`;
+                resultEl.innerHTML = html;
+            } catch (err) {
+                clearInterval(interval);
+                progressBar.style.width = '0%';
+                resultEl.innerHTML = '<p style="color:red;">Error: ' + err + '</p>';
+            }
+        });
+    </script>
+</body>
+</html>
