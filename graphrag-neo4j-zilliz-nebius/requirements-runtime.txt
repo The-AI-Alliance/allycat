@@ -1,0 +1,59 @@
+# ============================================
+# RUNTIME REQUIREMENTS - Flask GraphRAG App
+# ============================================
+# These are the MINIMAL packages needed to run the Flask GraphRAG app
+# after the pipeline has been completed.
+# Use this for production deployments to save ~500 MB RAM
+
+# ============================================
+# Core Runtime - DO NOT REMOVE
+# ============================================
+
+# Asyncio support
+nest_asyncio
+
+# Advanced JSON parsing (for LLM responses)
+orjson>=3.8.0
+json-repair>=0.7.0
+
+# Vector Database (client-only, lightweight)
+pymilvus==2.5.5
+
+# LLM Integration
+litellm
+
+# LlamaIndex Core (for querying)
+llama-index
+llama-index-embeddings-huggingface
+llama-index-llms-litellm
+llama-index-llms-ollama
+llama-index-vector-stores-milvus==0.5.0
+
+# Graph Database (client-only)
+neo4j
+
+# Graph Analysis (for community queries)
+networkx
+
+# LLM APIs (for query synthesis)
+google-generativeai
+openai>=1.0.0
+
+# Web Framework
+flask==2.3.3
+chainlit              # Chat UI (only if using chainlit apps)
+
+# Utilities
+python-dotenv
+humanfriendly
+pandas
+
+# ============================================
+# Embedding Model - LARGE (500+ MB)
+# ============================================
+# PyTorch CPU (required for sentence-transformers/embeddings)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu
+
+# Note: For cloud embeddings in future, remove torch + sentence-transformers
+# to save ~500 MB

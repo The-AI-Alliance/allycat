@@ -22,6 +22,7 @@ AllyCat also includes web scraping tools that extract data from your website (or
 
 ## 🌟🌟 Features 🌟🌟 
 
+### Core RAG Features
 1. Web crawler to download content from website
 2. HTML processing/cleanup, text extraction and conversion to markdown. Uses [Docling](https://github.com/docling-project/docling)
 3. Chunking, vector embedding creation, saving to vector database.  Uses [Llama Index](https://docs.llamaindex.ai/en/stable/) and [Granite Embedding Model](https://huggingface.co/ibm-granite/granite-embedding-30m-english)
@@ -29,6 +30,15 @@ AllyCat also includes web scraping tools that extract data from your website (or
 5. Use local LLMs using [Ollama](https://ollama.com/) or use any inference service.  Uses [LiteLLM](https://www.litellm.ai/)
 6. Chatbot with interface to answer questions with text scraped from a website.
 7. End User and New Contributor Friendly.
+
+### GraphRAG Features (New!)
+1. **Entity & Relationship Extraction** - Automatically identifies key entities and their relationships
+2. **Community Detection** - Uses Louvain algorithm to discover knowledge communities
+3. **Graph Database Integration** - Stores knowledge graph in [Neo4j](https://neo4j.com/)
+4. **7-Phase Query System** - Advanced query processing with query-aware ranking
+5. **Hybrid Search** - Combines vector search with graph traversal for better answers
+6. **Multiple Deployment Options** - Local (Ollama) or Cloud (Nebius/OpenAI)
+7. **Docker Ready** - Full containerized setup with auto-pipeline
 
 ## AllyCat Workflow
 
@@ -42,14 +52,10 @@ You can run allycat in following settings:
 
 | Setup                                              | Stack                             | Description                                   |
 |----------------------------------------------------|-----------------------------------|-----------------------------------------------|
-| [RAG (local) 1](rag-local-milvus-ollama/README.md) | Milvus (DB) + Ollama (LLMs)       | Everything runs locally.  No API keys needed. |
-| [RAG remote 1](rag-remote/README.md) | Milvus (DB) + models running on the cloud        |  All models are running on cloud.  API keys are required|
-
-
-<!-- 
-| [Graph RAG local](#)                               | Neo4J (db) + Ollama (LLMs)        | Everything runs locally.  No API keys needed. |
-| [Graph RAG remote 1](#)                            | Neo4J (db) + Inference  providers | Services run on the cloud                     | 
--->
+| [RAG (local)](rag-local-milvus-ollama/README.md) | Milvus (DB) + Ollama (LLMs)       | Everything runs locally.  No API keys needed. |
+| [RAG (remote)](rag-remote/README.md) | Milvus (DB) + models running on the cloud        |  All models are running on cloud.  API keys are required|
+| [GraphRAG (local)](graphrag-neo4j-milvus-ollama/README.md) | Neo4j + Milvus + Ollama | Full GraphRAG with local infrastructure. Heavy but private. |
+| [GraphRAG (cloud)](graphrag-neo4j-zilliz-nebius/README.md) | Neo4j Aura + Zilliz + Nebius | Full GraphRAG with cloud services. Lightweight and scalable. |
 
 <!-- 
 ### Option 1: Use the Docker image

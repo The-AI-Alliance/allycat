@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  allycat-local:
+    image: allycat-graphrag:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: allycat-local
+    ports:
+      - "8080:8080"
+      - "11434:11434"
+    environment:
+      - LLM_RUN_ENV=local_ollama
+      - VECTOR_DB_TYPE=local
+      - APP_TYPE=flask_graph
+      - AUTO_RUN_PIPELINE=false
+    env_file:
+      - .env
+    volumes:
+      - ./workspace:/allycat/workspace
+    command: ["deploy"]
+    restart: unless-stopped

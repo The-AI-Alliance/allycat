@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Add markdown parser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <!-- Add syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+            </div>
+            <h1>Chat with the website</h1>
+            &nbsp; &nbsp; &nbsp; &nbsp; (<span style="font-size: small;"><a href="https://github.com/The-AI-Alliance/allycat" target="_blank">fork me @ Github</a></span>)
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            {% if init_error %}
+            <div class="message system error">
+                <div class="markdown-content">
+                    <h3>System Initialization Error</h3>
+                    <p>The system failed to initialize with the following error:</p>
+                    <pre><code>{{ init_error }}</code></pre>
+                    <p>Please check your configuration and environment variables.</p>
+                </div>
+            </div>
+            {% else %}
+            <div class="message system">
+                <div class="markdown-content">Hello! How can I assist you today?</div>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="message-input">
+            <form id="chatForm">
+                <input type="text" id="userInput" placeholder="Ask something..." autocomplete="off">
+                <button type="submit">
+                    <i class="fa fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
